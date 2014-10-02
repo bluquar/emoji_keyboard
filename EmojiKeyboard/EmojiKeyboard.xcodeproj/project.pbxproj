@@ -14,6 +14,9 @@
 		8375639F19DDF8670065330F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8375639E19DDF8670065330F /* Images.xcassets */; };
 		837563A219DDF8670065330F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 837563A019DDF8670065330F /* LaunchScreen.xib */; };
 		837563AE19DDF8670065330F /* EmojiKeyboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837563AD19DDF8670065330F /* EmojiKeyboardTests.swift */; };
+		837563C019DDF91A0065330F /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837563BF19DDF91A0065330F /* KeyboardViewController.swift */; };
+		837563C319DDF91A0065330F /* EmojiSelectKB.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 837563BB19DDF91A0065330F /* EmojiSelectKB.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		837563CB19DDFD630065330F /* KBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837563CA19DDFD630065330F /* KBButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +27,35 @@
 			remoteGlobalIDString = 8375638E19DDF8660065330F;
 			remoteInfo = EmojiKeyboard;
 		};
+		837563C119DDF91A0065330F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8375638719DDF8660065330F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 837563BA19DDF91A0065330F;
+			remoteInfo = EmojiSelectKB;
+		};
+		837563C419DDF91A0065330F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8375638719DDF8660065330F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 837563BA19DDF91A0065330F;
+			remoteInfo = EmojiSelectKB;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		837563C919DDF91A0065330F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				837563C319DDF91A0065330F /* EmojiSelectKB.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8375638F19DDF8660065330F /* EmojiKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +69,10 @@
 		837563A719DDF8670065330F /* EmojiKeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmojiKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		837563AC19DDF8670065330F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		837563AD19DDF8670065330F /* EmojiKeyboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiKeyboardTests.swift; sourceTree = "<group>"; };
+		837563BB19DDF91A0065330F /* EmojiSelectKB.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EmojiSelectKB.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		837563BE19DDF91A0065330F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		837563BF19DDF91A0065330F /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		837563CA19DDFD630065330F /* KBButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +90,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		837563B819DDF91A0065330F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -63,6 +105,7 @@
 			children = (
 				8375639119DDF8660065330F /* EmojiKeyboard */,
 				837563AA19DDF8670065330F /* EmojiKeyboardTests */,
+				837563BC19DDF91A0065330F /* EmojiSelectKB */,
 				8375639019DDF8660065330F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +115,7 @@
 			children = (
 				8375638F19DDF8660065330F /* EmojiKeyboard.app */,
 				837563A719DDF8670065330F /* EmojiKeyboardTests.xctest */,
+				837563BB19DDF91A0065330F /* EmojiSelectKB.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,6 +159,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		837563BC19DDF91A0065330F /* EmojiSelectKB */ = {
+			isa = PBXGroup;
+			children = (
+				837563BF19DDF91A0065330F /* KeyboardViewController.swift */,
+				837563CA19DDFD630065330F /* KBButton.swift */,
+				837563BD19DDF91A0065330F /* Supporting Files */,
+			);
+			path = EmojiSelectKB;
+			sourceTree = "<group>";
+		};
+		837563BD19DDF91A0065330F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				837563BE19DDF91A0065330F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,10 +187,13 @@
 				8375638B19DDF8660065330F /* Sources */,
 				8375638C19DDF8660065330F /* Frameworks */,
 				8375638D19DDF8660065330F /* Resources */,
+				837563C919DDF91A0065330F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				837563C219DDF91A0065330F /* PBXTargetDependency */,
+				837563C519DDF91A0065330F /* PBXTargetDependency */,
 			);
 			name = EmojiKeyboard;
 			productName = EmojiKeyboard;
@@ -153,6 +218,23 @@
 			productReference = 837563A719DDF8670065330F /* EmojiKeyboardTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		837563BA19DDF91A0065330F /* EmojiSelectKB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 837563C819DDF91A0065330F /* Build configuration list for PBXNativeTarget "EmojiSelectKB" */;
+			buildPhases = (
+				837563B719DDF91A0065330F /* Sources */,
+				837563B819DDF91A0065330F /* Frameworks */,
+				837563B919DDF91A0065330F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmojiSelectKB;
+			productName = EmojiSelectKB;
+			productReference = 837563BB19DDF91A0065330F /* EmojiSelectKB.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,6 +250,9 @@
 					837563A619DDF8670065330F = {
 						CreatedOnToolsVersion = 6.0;
 						TestTargetID = 8375638E19DDF8660065330F;
+					};
+					837563BA19DDF91A0065330F = {
+						CreatedOnToolsVersion = 6.0;
 					};
 				};
 			};
@@ -186,6 +271,7 @@
 			targets = (
 				8375638E19DDF8660065330F /* EmojiKeyboard */,
 				837563A619DDF8670065330F /* EmojiKeyboardTests */,
+				837563BA19DDF91A0065330F /* EmojiSelectKB */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +288,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		837563A519DDF8670065330F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		837563B919DDF91A0065330F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -229,6 +322,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		837563B719DDF91A0065330F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				837563CB19DDFD630065330F /* KBButton.swift in Sources */,
+				837563C019DDF91A0065330F /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -236,6 +338,16 @@
 			isa = PBXTargetDependency;
 			target = 8375638E19DDF8660065330F /* EmojiKeyboard */;
 			targetProxy = 837563A819DDF8670065330F /* PBXContainerItemProxy */;
+		};
+		837563C219DDF91A0065330F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 837563BA19DDF91A0065330F /* EmojiSelectKB */;
+			targetProxy = 837563C119DDF91A0065330F /* PBXContainerItemProxy */;
+		};
+		837563C519DDF91A0065330F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 837563BA19DDF91A0065330F /* EmojiSelectKB */;
+			targetProxy = 837563C419DDF91A0065330F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -390,6 +502,30 @@
 			};
 			name = Release;
 		};
+		837563C619DDF91A0065330F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EmojiSelectKB/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		837563C719DDF91A0065330F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EmojiSelectKB/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -409,12 +545,22 @@
 				837563B319DDF8670065330F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		837563B419DDF8670065330F /* Build configuration list for PBXNativeTarget "EmojiKeyboardTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				837563B519DDF8670065330F /* Debug */,
 				837563B619DDF8670065330F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		837563C819DDF91A0065330F /* Build configuration list for PBXNativeTarget "EmojiSelectKB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				837563C619DDF91A0065330F /* Debug */,
+				837563C719DDF91A0065330F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

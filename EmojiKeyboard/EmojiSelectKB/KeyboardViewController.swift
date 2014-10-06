@@ -8,63 +8,26 @@
 
 import UIKit
 
-class KeyboardViewController: UIInputViewController {
+class KeyboardViewController: UIInputViewController /* ButtonLayoutDelegate */ {
 
     @IBOutlet var nextKeyboardButton: UIButton!
     
-    var buttons: NSArray!
-    
-    var someButton: UIButton!
-    var anotherButton: UIButton!
+    var buttonLayoutManager : ButtonLayoutManager!
+    var emojiSelectionController: EmojiSelectionController!
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
-        
         // Add custom view sizing constraints here
-    }
-    
-    func initializeButtons() {
-        // nsarray of buttons
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.emojiSelectionController = EmojiSelectionController()
+        self.buttonLayoutManager = ButtonLayoutManager(view: self.view, buttonSource: self.emojiSelectionController)
         self.drawNextKeyboardButton()
-        self.initializeButtons()
-        self.drawSomeButton()
-        self.drawAnotherButton()
-    }
-    
-    func drawSomeButton() {
-        self.someButton = KBButton.generateButton(title: "🚀")
-        self.someButton.addTarget(self, action: "displayTitle:", forControlEvents: UIControlEvents.TouchUpInside)
-        self.view.addSubview(self.someButton)
         
-        var buttonCenterX = NSLayoutConstraint(item: self.someButton, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0.0)
-        var buttonCenterY = NSLayoutConstraint(item: self.someButton, attribute: .CenterY, relatedBy: .Equal, toItem: self.view, attribute: .CenterY, multiplier: 1.0, constant: 0.0)
-        
-        self.view.addConstraints([buttonCenterX, buttonCenterY])
-        
-        
-    }
-    
-    func drawAnotherButton() {
-        self.anotherButton = KBButton.generateButton(title: "bitches")
-        self.anotherButton.addTarget(self, action: "displayTitle:", forControlEvents: UIControlEvents.TouchUpInside)
-        self.view.addSubview(self.someButton)
-        
-        var buttonCenterX = NSLayoutConstraint(item: self.someButton, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0.0)
-        var buttonCenterY = NSLayoutConstraint(item: self.someButton, attribute: .CenterY, relatedBy: .Equal, toItem: self.view, attribute: .CenterY, multiplier: 1.0, constant: 0.0)
-        
-        self.view.addConstraints([buttonCenterX, buttonCenterY])
-        
-        
-    }
-    
-    func displayTitle(sender: UIButton) {
-        var proxy = self.textDocumentProxy as UITextDocumentProxy
-        proxy.insertText(sender.titleLabel!.text!)
+        //self.manualSelectionController = ManualSelectionController(self.buttonLayoutManager)
     }
     
     func drawNextKeyboardButton() {
@@ -72,8 +35,6 @@ class KeyboardViewController: UIInputViewController {
         self.nextKeyboardButton = UIButton.buttonWithType(.System) as UIButton
         
         self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), forState: .Normal)
-        
-        
         
         self.nextKeyboardButton.sizeToFit()
         self.nextKeyboardButton.setTranslatesAutoresizingMaskIntoConstraints(false)

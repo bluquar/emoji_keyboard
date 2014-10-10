@@ -16,31 +16,34 @@ class KBButton: NSObject {
     var layoutManager: ButtonLayoutManager
     
     init(ratingMap: EmojiRatingMap, imagePath: String, view: UIView,
-        translationX: Int, translationY: Int, layoutManager: ButtonLayoutManager) {
+        translationX: CGFloat, translationY: CGFloat, scaleFactor: CGFloat, layoutManager: ButtonLayoutManager) {
             self.view = view
             self.layoutManager = layoutManager
             
             self.img = UIImage(contentsOfFile: imagePath)
             var tap: UITapGestureRecognizer! = UITapGestureRecognizer()
             
-            self.subview = UIImageView(image: self.img)
+            self.subview = UIImageView(frame: CGRect(origin: view.frame.origin, size: CGSize(width: view.frame.size.width * scaleFactor, height: view.frame.size.height * scaleFactor)))
+            self.subview.image = UIImage(contentsOfFile: imagePath)
+            
+            
             self.subview.addGestureRecognizer(tap)
             
             self.view.addSubview(self.subview)
-            
+
+            //self.subview.setTranslatesAutoresizingMaskIntoConstraints(false)
             var buttonCenterX = NSLayoutConstraint(item: self.subview,
-                attribute: .CenterX, relatedBy: .Equal, toItem: self.view,
-                attribute: .CenterX, multiplier: 1.0, constant: CGFloat(translationX))
+                attribute: .CenterX, relatedBy: .LessThanOrEqual, toItem: self.view,
+                attribute: .CenterX, multiplier: 1.0, constant: translationX)
             var buttonCenterY = NSLayoutConstraint(item: self.subview,
-                attribute: .CenterY, relatedBy: .Equal, toItem: self.view,
-                attribute: .CenterY, multiplier: 1.0, constant: CGFloat(translationY))
+                attribute: .CenterY, relatedBy: .LessThanOrEqual, toItem: self.view,
+                attribute: .CenterY, multiplier: 1.0, constant: translationY)
             
             self.view.addConstraints([buttonCenterX, buttonCenterY])
             
             super.init()
             
             tap.addTarget(self, action: "tapped:")
-            self.subview.backgroundColor = self.randomColor()
             
     }
     

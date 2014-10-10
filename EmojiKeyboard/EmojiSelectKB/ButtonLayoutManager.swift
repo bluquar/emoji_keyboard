@@ -24,17 +24,18 @@ class ButtonLayoutManager: NSObject {
         self.view = view
         super.init()
 
-
+        let a = self.view.frame
+        println(a)
         
-        self.topLeftButton = KBButton(ratingMap: EmojiRatingMap(), imagePath: "default.png", view: view, translationX: -10, translationY: -10,
-            layoutManager: self)
+        self.topLeftButton = KBButton(ratingMap: EmojiRatingMap(), imagePath: "kittens.jpg", view: view, translationX: -self.view.frame.width/4, translationY: -self.view.frame.height/4, scaleFactor: CGFloat(0.3), layoutManager: self)
         
-        self.topRightButton = KBButton(ratingMap: EmojiRatingMap(), imagePath: "default.png", view: view, translationX: 10, translationY: -10,
-            layoutManager: self)
-        self.bottomLeftButton = KBButton(ratingMap: EmojiRatingMap(), imagePath: "default.png", view: view, translationX: -10, translationY: 10,
-            layoutManager: self)
-        self.bottomRightButton = KBButton(ratingMap: EmojiRatingMap(), imagePath: "default.png", view: view, translationX: 10, translationY: 10,
-            layoutManager: self)
+        /*self.topRightButton = KBButton(ratingMap: EmojiRatingMap(), imagePath: "kittens.jpg", view: view, translationX: self.view.frame.width/4, translationY: -self.view.frame.height/4, scaleFactor: CGFloat(0.4), layoutManager: self)
+        
+        self.bottomLeftButton = KBButton(ratingMap: EmojiRatingMap(), imagePath: "kittens.jpg", view: view, translationX: -self.view.frame.width/4, translationY: self.view.frame.height/4, scaleFactor: CGFloat(0.4), layoutManager: self)
+        
+        self.bottomRightButton = KBButton(ratingMap: EmojiRatingMap(), imagePath: "kittens.jpg", view: view, translationX: self.view.frame.width/4, translationY: self.view.frame.height/4, scaleFactor: CGFloat(0.4), layoutManager: self)*/
+        
+        self.view.layoutSubviews()
         
         self.buttonSource.setInitialButtons(self)
         

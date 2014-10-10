@@ -15,6 +15,30 @@ class KeyboardViewController: UIInputViewController /* ButtonLayoutDelegate */ {
     var buttonLayoutManager : ButtonLayoutManager!
     var emojiSelectionController: EmojiSelectionController!
     
+    
+    var customInterface: UIView!
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
+        var nib = UINib(nibName: "CustomKeyboardInterface", bundle: nil)
+        let objects = nib.instantiateWithOwner(self, options: nil)
+        customInterface = objects[0] as UIView
+    }
+
+    override init() {
+        super.init()
+        
+        var nib = UINib(nibName: "CustomKeyboardInterface", bundle: nil)
+        let objects = nib.instantiateWithOwner(self, options: nil)
+        customInterface = objects[0] as UIView
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    
     override func updateViewConstraints() {
         super.updateViewConstraints()
         // Add custom view sizing constraints here
@@ -22,12 +46,24 @@ class KeyboardViewController: UIInputViewController /* ButtonLayoutDelegate */ {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.drawNextKeyboardButton()
+        view.addSubview(customInterface)
+        
+        /*self.drawNextKeyboardButton()
         
         self.emojiSelectionController = EmojiSelectionController()
-        self.buttonLayoutManager = ButtonLayoutManager(view: self.view, buttonSource: self.emojiSelectionController)
-        self.drawNextKeyboardButton()
+        self.buttonLayoutManager = ButtonLayoutManager(view: self.view, buttonSource: self.emojiSelectionController)*/
         
         //self.manualSelectionController = ManualSelectionController(self.buttonLayoutManager)
+    }
+    
+    @IBAction func tappedTestButton() {
+        var proxy = textDocumentProxy as UITextDocumentProxy
+        proxy.insertText("test button")
+    }
+    
+    override func viewDidLayoutSubviews() {
+        //self.view.frame = CGRect(x:0, y:0, width:400, height:200)
     }
     
     func drawNextKeyboardButton() {
@@ -69,7 +105,7 @@ class KeyboardViewController: UIInputViewController /* ButtonLayoutDelegate */ {
         } else {
             textColor = UIColor.blackColor()
         }
-        self.nextKeyboardButton.setTitleColor(textColor, forState: .Normal)
+        // self.nextKeyboardButton.setTitleColor(textColor, forState: .Normal)
     }
 
 

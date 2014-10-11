@@ -11,73 +11,40 @@ import UIKit
 class KBButton: NSObject {
     
     var view: UIView
-    var subview: UIImageView
-    var img: UIImage
     var layoutManager: ButtonLayoutManager
+    var layout: KBLayout
+    var button: UIButton
+    var id: Int
     
-    init(ratingMap: EmojiRatingMap, imagePath: String, view: UIView,
-        translationX: CGFloat, translationY: CGFloat, scaleFactor: CGFloat, layoutManager: ButtonLayoutManager) {
+    init(view: UIView, layout: KBLayout, layoutManager: ButtonLayoutManager) {
             self.view = view
+            self.layout = layout
+            self.id = -1
             self.layoutManager = layoutManager
-            
-            self.img = UIImage(contentsOfFile: imagePath)
-            var tap: UITapGestureRecognizer! = UITapGestureRecognizer()
-            
-            self.subview = UIImageView(frame: CGRect(origin: view.frame.origin, size: CGSize(width: view.frame.size.width * scaleFactor, height: view.frame.size.height * scaleFactor)))
-            self.subview.image = UIImage(contentsOfFile: imagePath)
-            
-            
-            self.subview.addGestureRecognizer(tap)
-            
-            self.view.addSubview(self.subview)
-
-            //self.subview.setTranslatesAutoresizingMaskIntoConstraints(false)
-            var buttonCenterX = NSLayoutConstraint(item: self.subview,
-                attribute: .CenterX, relatedBy: .LessThanOrEqual, toItem: self.view,
-                attribute: .CenterX, multiplier: 1.0, constant: translationX)
-            var buttonCenterY = NSLayoutConstraint(item: self.subview,
-                attribute: .CenterY, relatedBy: .LessThanOrEqual, toItem: self.view,
-                attribute: .CenterY, multiplier: 1.0, constant: translationY)
-            
-            self.view.addConstraints([buttonCenterX, buttonCenterY])
-            
+            self.button = UIButton.buttonWithType(.System) as UIButton
+            self.button.titleLabel?.numberOfLines = 2
+            self.button.setTitle("PLACEHOL\nDERRRRRR", forState: .Normal)
             super.init()
-            
-            tap.addTarget(self, action: "tapped:")
-            
     }
     
-    func randomColor() -> UIColor {
-        var red = CGFloat(arc4random_uniform(256)) / 256.0
-        var green = CGFloat(arc4random_uniform(256)) / 256.0
-        var blue = CGFloat(arc4random_uniform(256)) / 256.0
-        var alpha = CGFloat(1.0)
+    func addToLayout(id: Int) {
+        self.id = id
         
-        return UIColor(red: red, green: green, blue: blue, alpha: alpha)
+        // add a callback
+        self.button.addTarget(self, action: "tapped:", forControlEvents: .TouchUpInside)
+        
+        // layout config
+        self.button.sizeToFit()
+        self.button.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.button.titleLabel?.font = UIFont.systemFontOfSize(14)
+        self.button.backgroundColor = UIColor(white: 0.9, alpha: 1)
+        self.button.layer.cornerRadius = 5
+        view.addSubview(self.button)
+        
+        self.layout.apply(self.button, parentview: self.view)
     }
     
-    func tapped(sender: UIGestureRecognizer) {
-        
-    }
-    
-    
-    
-    class func generateButton(#title: String) -> UIButton {
-        var button = UIButton.buttonWithType(.System) as UIButton
-        button.setTitle(title, forState: .Normal)
-        
-        button.sizeToFit()
-        button.setTranslatesAutoresizingMaskIntoConstraints(false)
-        
-        //button.titleLabel!.font = UIFont(name: "MarkerFelt-Thin", size: 32)
-        
-        button.backgroundColor = UIColor(red: 255.0, green: 0.0, blue: 0.0, alpha: 0.5)
-        
-        // button.layer : CALayer (tweak minor UI things)
-        button.layer.cornerRadius = 5
-        
-        
-        
-        return button
+    func tapped(sender: UIButton!) {
+        self.layoutManager.tapped(self.id)
     }
 }

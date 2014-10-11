@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		832DCF9619E7884700B74948 /* KBNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832DCF9519E7884700B74948 /* KBNib.xib */; };
 		832DCF9819E7893000B74948 /* CustomKeyboardInterface.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832DCF9719E7893000B74948 /* CustomKeyboardInterface.xib */; };
-		832DCF9A19E7899600B74948 /* CustomKeyboardInterface.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832DCF9919E7899600B74948 /* CustomKeyboardInterface.xib */; };
+		832F767E19E9D8D600C3B95E /* KBLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F767D19E9D8D600C3B95E /* KBLayout.swift */; };
 		8375639519DDF8660065330F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375639419DDF8660065330F /* AppDelegate.swift */; };
 		8375639819DDF8660065330F /* EmojiKeyboard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8375639619DDF8660065330F /* EmojiKeyboard.xcdatamodeld */; };
 		8375639A19DDF8660065330F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375639919DDF8660065330F /* ViewController.swift */; };
@@ -21,11 +21,9 @@
 		837563C319DDF91A0065330F /* EmojiSelectKB.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 837563BB19DDF91A0065330F /* EmojiSelectKB.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		837563CB19DDFD630065330F /* KBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837563CA19DDFD630065330F /* KBButton.swift */; };
 		837563CD19DE21DC0065330F /* ButtonLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837563CC19DE21DC0065330F /* ButtonLayoutManager.swift */; };
-		837563CF19DE23690065330F /* ButtonLayoutSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837563CE19DE23690065330F /* ButtonLayoutSpec.swift */; };
 		83ACDEBB19E23E920060EDA6 /* ButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACDEBA19E23E920060EDA6 /* ButtonSpec.swift */; };
 		83ACDEBD19E241070060EDA6 /* EmojiSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACDEBC19E241070060EDA6 /* EmojiSelectionController.swift */; };
 		83ACDEBF19E2444A0060EDA6 /* EmojiRatingMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACDEBE19E2444A0060EDA6 /* EmojiRatingMap.swift */; };
-		83ACDEC219E30AA20060EDA6 /* EmojiTreeChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACDEC119E30AA20060EDA6 /* EmojiTreeChoice.swift */; };
 		83ACDEC419E340BD0060EDA6 /* kittens.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83ACDEC319E340BD0060EDA6 /* kittens.jpg */; };
 /* End PBXBuildFile section */
 
@@ -70,7 +68,10 @@
 /* Begin PBXFileReference section */
 		832DCF9519E7884700B74948 /* KBNib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KBNib.xib; sourceTree = "<group>"; };
 		832DCF9719E7893000B74948 /* CustomKeyboardInterface.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomKeyboardInterface.xib; sourceTree = "<group>"; };
-		832DCF9919E7899600B74948 /* CustomKeyboardInterface.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomKeyboardInterface.xib; sourceTree = "<group>"; };
+		832F767819E9BD0000C3B95E /* EmojiKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = EmojiKeyboard.entitlements; sourceTree = "<group>"; };
+		832F767919E9BD5A00C3B95E /* EmojiSelectKB.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = EmojiSelectKB.entitlements; sourceTree = "<group>"; };
+		832F767A19E9C4FA00C3B95E /* EmojiKeyboard.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = EmojiKeyboard.xcodeproj; sourceTree = "<group>"; };
+		832F767D19E9D8D600C3B95E /* KBLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBLayout.swift; sourceTree = "<group>"; };
 		8375638F19DDF8660065330F /* EmojiKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8375639319DDF8660065330F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8375639419DDF8660065330F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,13 +88,11 @@
 		837563BF19DDF91A0065330F /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		837563CA19DDFD630065330F /* KBButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBButton.swift; sourceTree = "<group>"; };
 		837563CC19DE21DC0065330F /* ButtonLayoutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonLayoutManager.swift; sourceTree = "<group>"; };
-		837563CE19DE23690065330F /* ButtonLayoutSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonLayoutSpec.swift; sourceTree = "<group>"; };
 		83ACDEBA19E23E920060EDA6 /* ButtonSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSpec.swift; sourceTree = "<group>"; };
 		83ACDEBC19E241070060EDA6 /* EmojiSelectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiSelectionController.swift; sourceTree = "<group>"; };
 		83ACDEBE19E2444A0060EDA6 /* EmojiRatingMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiRatingMap.swift; sourceTree = "<group>"; };
-		83ACDEC019E244620060EDA6 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
-		83ACDEC119E30AA20060EDA6 /* EmojiTreeChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiTreeChoice.swift; sourceTree = "<group>"; };
-		83ACDEC319E340BD0060EDA6 /* kittens.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kittens.jpg; sourceTree = "<group>"; };
+		83ACDEC019E244620060EDA6 /* experiment.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = experiment.playground; sourceTree = "<group>"; };
+		83ACDEC319E340BD0060EDA6 /* kittens.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = kittens.jpg; path = ../EmojiKeyboard/kittens.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,9 +120,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		832F767B19E9C4FA00C3B95E /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
 		8375638619DDF8660065330F = {
 			isa = PBXGroup;
 			children = (
+				832F767A19E9C4FA00C3B95E /* EmojiKeyboard.xcodeproj */,
 				8375639119DDF8660065330F /* EmojiKeyboard */,
 				837563AA19DDF8670065330F /* EmojiKeyboardTests */,
 				837563BC19DDF91A0065330F /* EmojiSelectKB */,
@@ -144,6 +149,7 @@
 		8375639119DDF8660065330F /* EmojiKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				832F767819E9BD0000C3B95E /* EmojiKeyboard.entitlements */,
 				8375639419DDF8660065330F /* AppDelegate.swift */,
 				8375639919DDF8660065330F /* ViewController.swift */,
 				8375639B19DDF8660065330F /* Main.storyboard */,
@@ -160,7 +166,6 @@
 		8375639219DDF8660065330F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				83ACDEC319E340BD0060EDA6 /* kittens.jpg */,
 				8375639319DDF8660065330F /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -186,17 +191,16 @@
 		837563BC19DDF91A0065330F /* EmojiSelectKB */ = {
 			isa = PBXGroup;
 			children = (
+				832F767919E9BD5A00C3B95E /* EmojiSelectKB.entitlements */,
 				837563BF19DDF91A0065330F /* KeyboardViewController.swift */,
 				83ACDEBA19E23E920060EDA6 /* ButtonSpec.swift */,
 				83ACDEBC19E241070060EDA6 /* EmojiSelectionController.swift */,
 				83ACDEBE19E2444A0060EDA6 /* EmojiRatingMap.swift */,
-				83ACDEC119E30AA20060EDA6 /* EmojiTreeChoice.swift */,
-				83ACDEC019E244620060EDA6 /* MyPlayground.playground */,
+				83ACDEC019E244620060EDA6 /* experiment.playground */,
 				837563CC19DE21DC0065330F /* ButtonLayoutManager.swift */,
-				837563CE19DE23690065330F /* ButtonLayoutSpec.swift */,
 				837563CA19DDFD630065330F /* KBButton.swift */,
+				832F767D19E9D8D600C3B95E /* KBLayout.swift */,
 				837563BD19DDF91A0065330F /* Supporting Files */,
-				832DCF9919E7899600B74948 /* CustomKeyboardInterface.xib */,
 			);
 			path = EmojiSelectKB;
 			sourceTree = "<group>";
@@ -204,6 +208,7 @@
 		837563BD19DDF91A0065330F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				83ACDEC319E340BD0060EDA6 /* kittens.jpg */,
 				837563BE19DDF91A0065330F /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -278,6 +283,12 @@
 				TargetAttributes = {
 					8375638E19DDF8660065330F = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = CL8FES7FKG;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					837563A619DDF8670065330F = {
 						CreatedOnToolsVersion = 6.0;
@@ -285,6 +296,12 @@
 					};
 					837563BA19DDF91A0065330F = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = CL8FES7FKG;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -299,6 +316,12 @@
 			mainGroup = 8375638619DDF8660065330F;
 			productRefGroup = 8375639019DDF8660065330F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 832F767B19E9C4FA00C3B95E /* Products */;
+					ProjectRef = 832F767A19E9C4FA00C3B95E /* EmojiKeyboard.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8375638E19DDF8660065330F /* EmojiKeyboard */,
@@ -333,7 +356,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				832DCF9A19E7899600B74948 /* CustomKeyboardInterface.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,9 +389,8 @@
 				83ACDEBF19E2444A0060EDA6 /* EmojiRatingMap.swift in Sources */,
 				83ACDEBB19E23E920060EDA6 /* ButtonSpec.swift in Sources */,
 				837563C019DDF91A0065330F /* KeyboardViewController.swift in Sources */,
-				837563CF19DE23690065330F /* ButtonLayoutSpec.swift in Sources */,
+				832F767E19E9D8D600C3B95E /* KBLayout.swift in Sources */,
 				837563CD19DE21DC0065330F /* ButtonLayoutManager.swift in Sources */,
-				83ACDEC219E30AA20060EDA6 /* EmojiTreeChoice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,9 +515,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EmojiKeyboard/EmojiKeyboard.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = EmojiKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -504,9 +529,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EmojiKeyboard/EmojiKeyboard.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = EmojiKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -547,6 +576,9 @@
 		837563C619DDF91A0065330F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = EmojiSelectKB/EmojiSelectKB.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -554,6 +586,7 @@
 				INFOPLIST_FILE = EmojiSelectKB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -561,9 +594,13 @@
 		837563C719DDF91A0065330F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = EmojiSelectKB/EmojiSelectKB.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = EmojiSelectKB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -578,7 +615,7 @@
 				837563B019DDF8670065330F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		837563B119DDF8670065330F /* Build configuration list for PBXNativeTarget "EmojiKeyboard" */ = {
 			isa = XCConfigurationList;
@@ -587,7 +624,7 @@
 				837563B319DDF8670065330F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		837563B419DDF8670065330F /* Build configuration list for PBXNativeTarget "EmojiKeyboardTests" */ = {
 			isa = XCConfigurationList;
@@ -596,7 +633,7 @@
 				837563B619DDF8670065330F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		837563C819DDF91A0065330F /* Build configuration list for PBXNativeTarget "EmojiSelectKB" */ = {
 			isa = XCConfigurationList;
@@ -605,7 +642,7 @@
 				837563C719DDF91A0065330F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 

@@ -13,8 +13,21 @@ class EmojiSelection: NSObject {
     var image: UIImage
     
     init(path: String, associations: [String: Int]) {
-        self.weights = EmojiRatingMap()
-        self.weights.update(associations)
+        self.weights = EmojiRatingMap(mapping: associations)
         self.image = UIImage(named: path)
+    }
+    
+    func update(mapping: EmojiRatingMap) {
+        for (emoji, rating) in self.weights.mapping {
+            mapping.inc(emoji, amt: rating)
+        }
+    }
+    
+    func scoreForAggregate(agg: EmojiRatingMap) -> Int {
+        var score = 0
+        for (emoji, rating) in self.weights.mapping {
+            score += rating * agg.get(emoji)
+        }
+        return score
     }
 }

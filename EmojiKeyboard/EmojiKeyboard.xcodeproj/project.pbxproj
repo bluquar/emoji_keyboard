@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		832DCF9619E7884700B74948 /* KBNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832DCF9519E7884700B74948 /* KBNib.xib */; };
 		832DCF9819E7893000B74948 /* CustomKeyboardInterface.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832DCF9719E7893000B74948 /* CustomKeyboardInterface.xib */; };
-		832F767E19E9D8D600C3B95E /* KBLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F767D19E9D8D600C3B95E /* KBLayout.swift */; };
 		8375639519DDF8660065330F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375639419DDF8660065330F /* AppDelegate.swift */; };
 		8375639819DDF8660065330F /* EmojiKeyboard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8375639619DDF8660065330F /* EmojiKeyboard.xcdatamodeld */; };
 		8375639A19DDF8660065330F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375639919DDF8660065330F /* ViewController.swift */; };
@@ -21,12 +20,19 @@
 		837563C319DDF91A0065330F /* EmojiSelectKB.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 837563BB19DDF91A0065330F /* EmojiSelectKB.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		837563CB19DDFD630065330F /* KBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837563CA19DDFD630065330F /* KBButton.swift */; };
 		837563CD19DE21DC0065330F /* ButtonLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837563CC19DE21DC0065330F /* ButtonLayoutManager.swift */; };
+		839E5F6919EAFA5000283AEB /* water.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 839E5F6819EAFA5000283AEB /* water.PNG */; };
+		839E5F6B19EAFB3800283AEB /* playfulkitten.png in Resources */ = {isa = PBXBuildFile; fileRef = 839E5F6A19EAFB3800283AEB /* playfulkitten.png */; };
+		839E5F6D19EAFC5E00283AEB /* demon.png in Resources */ = {isa = PBXBuildFile; fileRef = 839E5F6C19EAFC5E00283AEB /* demon.png */; };
+		839E5F6F19EAFCF500283AEB /* creeper.png in Resources */ = {isa = PBXBuildFile; fileRef = 839E5F6E19EAFCF500283AEB /* creeper.png */; };
+		839E5F7119EAFDDD00283AEB /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 839E5F7019EAFDDD00283AEB /* clock.png */; };
+		839E5F7319EAFFB700283AEB /* bluecandle.png in Resources */ = {isa = PBXBuildFile; fileRef = 839E5F7219EAFFB700283AEB /* bluecandle.png */; };
+		839E5F7519EB007000283AEB /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 839E5F7419EB007000283AEB /* tree.png */; };
 		83ACDEBB19E23E920060EDA6 /* ButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACDEBA19E23E920060EDA6 /* ButtonSpec.swift */; };
 		83ACDEBD19E241070060EDA6 /* EmojiSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACDEBC19E241070060EDA6 /* EmojiSelectionController.swift */; };
 		83ACDEBF19E2444A0060EDA6 /* EmojiRatingMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACDEBE19E2444A0060EDA6 /* EmojiRatingMap.swift */; };
-		83AE328B19E9EF0600BA459D /* twloha.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AE328A19E9EF0600BA459D /* twloha.png */; };
 		83AE328F19E9F2AB00BA459D /* ears.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AE328E19E9F2AA00BA459D /* ears.png */; };
 		83AE329119E9FFC700BA459D /* EmojiSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AE329019E9FFC700BA459D /* EmojiSelection.swift */; };
+		83AE329319EA1C0F00BA459D /* kitten.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AE329219EA1C0F00BA459D /* kitten.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +79,6 @@
 		832F767819E9BD0000C3B95E /* EmojiKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = EmojiKeyboard.entitlements; sourceTree = "<group>"; };
 		832F767919E9BD5A00C3B95E /* EmojiSelectKB.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = EmojiSelectKB.entitlements; sourceTree = "<group>"; };
 		832F767A19E9C4FA00C3B95E /* EmojiKeyboard.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = EmojiKeyboard.xcodeproj; sourceTree = "<group>"; };
-		832F767D19E9D8D600C3B95E /* KBLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBLayout.swift; sourceTree = "<group>"; };
 		8375638F19DDF8660065330F /* EmojiKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8375639319DDF8660065330F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8375639419DDF8660065330F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,13 +95,20 @@
 		837563BF19DDF91A0065330F /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		837563CA19DDFD630065330F /* KBButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBButton.swift; sourceTree = "<group>"; };
 		837563CC19DE21DC0065330F /* ButtonLayoutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonLayoutManager.swift; sourceTree = "<group>"; };
+		839E5F6819EAFA5000283AEB /* water.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = water.PNG; sourceTree = "<group>"; };
+		839E5F6A19EAFB3800283AEB /* playfulkitten.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playfulkitten.png; sourceTree = "<group>"; };
+		839E5F6C19EAFC5E00283AEB /* demon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demon.png; sourceTree = "<group>"; };
+		839E5F6E19EAFCF500283AEB /* creeper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = creeper.png; sourceTree = "<group>"; };
+		839E5F7019EAFDDD00283AEB /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
+		839E5F7219EAFFB700283AEB /* bluecandle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluecandle.png; sourceTree = "<group>"; };
+		839E5F7419EB007000283AEB /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
 		83ACDEBA19E23E920060EDA6 /* ButtonSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSpec.swift; sourceTree = "<group>"; };
 		83ACDEBC19E241070060EDA6 /* EmojiSelectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiSelectionController.swift; sourceTree = "<group>"; };
 		83ACDEBE19E2444A0060EDA6 /* EmojiRatingMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiRatingMap.swift; sourceTree = "<group>"; };
 		83ACDEC019E244620060EDA6 /* experiment.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = experiment.playground; sourceTree = "<group>"; };
-		83AE328A19E9EF0600BA459D /* twloha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twloha.png; sourceTree = "<group>"; };
 		83AE328E19E9F2AA00BA459D /* ears.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ears.png; sourceTree = "<group>"; };
 		83AE329019E9FFC700BA459D /* EmojiSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiSelection.swift; sourceTree = "<group>"; };
+		83AE329219EA1C0F00BA459D /* kitten.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kitten.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,8 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				83AE329019E9FFC700BA459D /* EmojiSelection.swift */,
-				83AE328E19E9F2AA00BA459D /* ears.png */,
-				83AE328A19E9EF0600BA459D /* twloha.png */,
 				832F767919E9BD5A00C3B95E /* EmojiSelectKB.entitlements */,
 				837563BF19DDF91A0065330F /* KeyboardViewController.swift */,
 				83ACDEBA19E23E920060EDA6 /* ButtonSpec.swift */,
@@ -206,7 +216,6 @@
 				83ACDEC019E244620060EDA6 /* experiment.playground */,
 				837563CC19DE21DC0065330F /* ButtonLayoutManager.swift */,
 				837563CA19DDFD630065330F /* KBButton.swift */,
-				832F767D19E9D8D600C3B95E /* KBLayout.swift */,
 				837563BD19DDF91A0065330F /* Supporting Files */,
 			);
 			path = EmojiSelectKB;
@@ -215,6 +224,15 @@
 		837563BD19DDF91A0065330F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				839E5F7419EB007000283AEB /* tree.png */,
+				839E5F7219EAFFB700283AEB /* bluecandle.png */,
+				839E5F7019EAFDDD00283AEB /* clock.png */,
+				839E5F6E19EAFCF500283AEB /* creeper.png */,
+				839E5F6C19EAFC5E00283AEB /* demon.png */,
+				839E5F6A19EAFB3800283AEB /* playfulkitten.png */,
+				83AE329219EA1C0F00BA459D /* kitten.png */,
+				83AE328E19E9F2AA00BA459D /* ears.png */,
+				839E5F6819EAFA5000283AEB /* water.PNG */,
 				837563BE19DDF91A0065330F /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -361,8 +379,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83AE328B19E9EF0600BA459D /* twloha.png in Resources */,
+				839E5F7319EAFFB700283AEB /* bluecandle.png in Resources */,
+				839E5F6B19EAFB3800283AEB /* playfulkitten.png in Resources */,
+				839E5F7519EB007000283AEB /* tree.png in Resources */,
 				83AE328F19E9F2AB00BA459D /* ears.png in Resources */,
+				839E5F6D19EAFC5E00283AEB /* demon.png in Resources */,
+				83AE329319EA1C0F00BA459D /* kitten.png in Resources */,
+				839E5F6F19EAFCF500283AEB /* creeper.png in Resources */,
+				839E5F7119EAFDDD00283AEB /* clock.png in Resources */,
+				839E5F6919EAFA5000283AEB /* water.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,7 +422,6 @@
 				83ACDEBF19E2444A0060EDA6 /* EmojiRatingMap.swift in Sources */,
 				83ACDEBB19E23E920060EDA6 /* ButtonSpec.swift in Sources */,
 				837563C019DDF91A0065330F /* KeyboardViewController.swift in Sources */,
-				832F767E19E9D8D600C3B95E /* KBLayout.swift in Sources */,
 				837563CD19DE21DC0065330F /* ButtonLayoutManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,21 +8,30 @@
 
 import UIKit
 
-class KeyboardViewController: UIInputViewController /* ButtonLayoutDelegate */ {
+class KeyboardViewController: UIInputViewController {
     
     // model/view delegates
     var buttonLayoutManager : ButtonLayoutManager!
     var emojiSelectionController: EmojiSelectionController!
     
-    override func updateViewConstraints() {
-        super.updateViewConstraints()
-        // Add custom view sizing constraints here
+    override init() {
+        super.init()
+        self.emojiSelectionController = EmojiSelectionController()
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.emojiSelectionController = EmojiSelectionController()
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        self.emojiSelectionController = EmojiSelectionController()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.emojiSelectionController = EmojiSelectionController()
         self.buttonLayoutManager = ButtonLayoutManager(view: self.view, proxy: self.textDocumentProxy as UITextDocumentProxy, buttonSource: self.emojiSelectionController, kbdelegate: self)
         self.buttonLayoutManager.initializeButtons()
     }

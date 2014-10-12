@@ -11,52 +11,75 @@ import UIKit
 class EmojiRatingMap: NSObject {
     
     var mapping: Dictionary<String, Int>
+    var maximum: String?
+    
+    init(sparse: Bool) {
+        if (!sparse) {
+            self.mapping = EmojiRatingMap.emptyMapping()
+        } else {
+            self.mapping = Dictionary<String, Int>()
+        }
+    }
+    
+    convenience init(mapping: [String: Int]) {
+        self.init(sparse: true)
+        self.mapping = mapping
+    }
+    
+    func add(mapping: EmojiRatingMap) {
+        for (emoji, rating) in mapping.mapping {
+            self.inc(emoji, amt: rating)
+        }
+    }
+    
+    func get(emoji: String) -> Int {
+        let idx = self.mapping.indexForKey(emoji)
+        if (idx == nil) {
+            return 0
+        } else {
+            return self.mapping[emoji]!
+        }
+    }
+    
+    func inc(emoji: String, amt: Int) {
+        if (self.maximum == nil) {
+            self.maximum = self.getBestEmoji()
+        }
+        if (amt == 0) {
+            return
+        } else {
+            let idx = self.mapping.indexForKey(emoji)
+            var newAmt: Int = 0
+            if (idx == nil) {
+                newAmt = amt
+            } else {
+                newAmt = amt + self.mapping[emoji]!
+            }
+            self.mapping[emoji] = newAmt
+            if (self.mapping[maximum!]! < newAmt) {
+                self.maximum = emoji
+            }
+        }
+    }
     
     func getBestEmoji() -> String {
-        var maxRating = -1
-        var maxEmoji: String = ":("
-        for (emoji, rating) in self.mapping {
-            if (maxRating < rating) {
-                maxEmoji = emoji
-                maxRating = rating
+        if (self.maximum != nil) {
+            return self.maximum!
+        } else {
+            var maxRating = -1
+            var maxEmoji: String = ":("
+            for (emoji, rating) in self.mapping {
+                if (maxRating < rating) {
+                    maxEmoji = emoji
+                    maxRating = rating
+                }
             }
-        }
-        return maxEmoji
-    }
-    
-    func updateRatings(otherRatings: EmojiRatingMap) {
-        for (emoji: String, rating: Int) in otherRatings.mapping {
-            var currentRating = self.mapping[emoji]
-            if (currentRating != nil) {
-                var newRating = currentRating! + rating
-                self.mapping[emoji] = newRating
-            }
+            return maxEmoji
         }
     }
     
-    convenience init(approvedEmojis: [String]) {
-        self.init()
-        
-        for (emoji: String) in approvedEmojis {
-            var currentRating = self.mapping[emoji]
-            if (currentRating != nil) {
-                var newRating = currentRating! + 1
-                self.mapping[emoji] = newRating
-            }
-        }
-    }
-    
-    func update(mapping: [String: Int]) {
-        for (emoji, rating) in mapping {
-            var idx = self.mapping.indexForKey(emoji)
-            if (idx != nil) {
-                self.mapping.updateValue(self.mapping[emoji]! + rating, forKey: emoji)
-            }
-        }
-    }
-    
-    override init() {
-        self.mapping = ["😁": 0,
+    class func emptyMapping() -> [String: Int] {
+        return ["😁": 0,
             "😂": 0,
             "😃": 0,
             "😄": 0,

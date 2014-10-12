@@ -62,24 +62,22 @@ class ButtonLayoutManager: NSObject {
             quad.addToLayout(id)
         }
         
-        /*self.topRightButton = KBButton(ratingMap: EmojiRatingMap(), imagePath: "kittens.jpg", view: view, translationX: self.view.frame.width/4, translationY: -self.view.frame.height/4, scaleFactor: CGFloat(0.4), layoutManager: self)
-        
-        self.bottomLeftButton = KBButton(ratingMap: EmojiRatingMap(), imagePath: "kittens.jpg", view: view, translationX: -self.view.frame.width/4, translationY: self.view.frame.height/4, scaleFactor: CGFloat(0.4), layoutManager: self)
-        
-        self.bottomRightButton = KBButton(ratingMap: EmojiRatingMap(), imagePath: "kittens.jpg", view: view, translationX: self.view.frame.width/4, translationY: self.view.frame.height/4, scaleFactor: CGFloat(0.4), layoutManager: self)*/
-        
-        //self.view.layoutSubviews()
-        
-        self.buttonSource.setInitialButtons(self)
+       self.buttonSource.updateButtons(self)
     }
     
     func tapped(id: Int) {
-        self.buttonSource.updateButtons(self, id: id)
+        self.buttonSource.updateState(id)
+        self.buttonSource.updateButtons(self)
     }
     
-    func updateButton(text: String, rows: Int, id: Int) {
+    func updateButtonWithText(text: String, rows: Int, id: Int) {
         self.quadrants[id]?.button.titleLabel?.numberOfLines = rows
         self.quadrants[id]?.button.setTitle(text, forState: .Normal)
         self.quadrants[id]?.button.sizeToFit()
+    }
+    
+    func updateButtonWithImage(img: UIImage, id: Int) {
+        self.quadrants[id]?.button.setTitle("", forState: .Normal)
+        self.quadrants[id]?.button.setBackgroundImage(img, forState: .Normal)
     }
 }

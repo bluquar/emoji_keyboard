@@ -24,6 +24,7 @@ class KBButton: NSObject {
             self.button = UIButton.buttonWithType(.System) as UIButton
             self.button.titleLabel?.numberOfLines = 2
             self.button.setTitle("PLACEHOL\nDERRRRRR", forState: .Normal)
+            
             super.init()
     }
     

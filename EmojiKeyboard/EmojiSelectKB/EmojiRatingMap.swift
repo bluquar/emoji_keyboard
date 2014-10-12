@@ -46,6 +46,15 @@ class EmojiRatingMap: NSObject {
         }
     }
     
+    func update(mapping: [String: Int]) {
+        for (emoji, rating) in mapping {
+            var idx = self.mapping.indexForKey(emoji)
+            if (idx != nil) {
+                self.mapping.updateValue(self.mapping[emoji]! + rating, forKey: emoji)
+            }
+        }
+    }
+    
     override init() {
         self.mapping = ["😁": 0,
             "😂": 0,

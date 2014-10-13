@@ -9,6 +9,8 @@
 import UIKit
 
 class EmojiSelection: NSObject {
+    let loadTimeDelay: UInt64 = 25 * NSEC_PER_MSEC
+    
     var weights: EmojiRatingMap
     var image: UIImage
     

@@ -31,25 +31,15 @@ class KeyboardViewController: UIInputViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.buttonLayoutManager = ButtonLayoutManager(view: self.view, proxy: self.textDocumentProxy as UITextDocumentProxy, buttonSource: self.emojiSelectionController, kbdelegate: self)
         self.buttonLayoutManager.initializeButtons()
-    }
-    
-    func didTapDot() {
-        var proxy = textDocumentProxy as UITextDocumentProxy
-        
-        proxy.insertText(".")
     }
     
     override func textWillChange(textInput: UITextInput) {
         // The app is about to change the document's contents. Perform any preparation here.
     }
-    
     override func textDidChange(textInput: UITextInput) {
         // The app has just changed the document's contents, the document context has been updated.
         
     }
-
-
 }

@@ -24,11 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EmojiSelectKB/ButtonLayoutManager.swift"
-            timestampString = "434850338.34347"
+            timestampString = "434901078.780615"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "init(view:proxy:buttonSource:kbdelegate:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -40,11 +40,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EmojiSelectKB/ButtonLayoutManager.swift"
-            timestampString = "434850338.34347"
+            timestampString = "434901078.780615"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "init(view:proxy:buttonSource:kbdelegate:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -56,11 +56,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EmojiSelectKB/KeyboardViewController.swift"
-            timestampString = "434778438.931906"
+            timestampString = "434901078.780615"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -72,12 +72,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EmojiSelectKB/ButtonLayoutManager.swift"
-            timestampString = "434850338.34347"
+            timestampString = "434904378.236843"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "initializeQuadrants()"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "initializeGrid()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -88,11 +88,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EmojiSelectKB/ButtonLayoutManager.swift"
-            timestampString = "434850338.34347"
+            timestampString = "434902978.549613"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "initializeNextKBbutton()"
             landmarkType = "5">
          </BreakpointContent>
@@ -104,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EmojiSelectKB/ButtonLayoutManager.swift"
-            timestampString = "434850338.34347"
+            timestampString = "434902978.549613"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "initializeButtons()"
             landmarkType = "5">
          </BreakpointContent>
@@ -120,11 +120,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EmojiSelectKB/ButtonLayoutManager.swift"
-            timestampString = "434850338.34347"
+            timestampString = "434902978.549613"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "initializeButtons()"
             landmarkType = "5">
          </BreakpointContent>
@@ -136,11 +136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EmojiSelectKB/ButtonLayoutManager.swift"
-            timestampString = "434850574.992091"
+            timestampString = "434904378.236843"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189">
+            startingLineNumber = "218"
+            endingLineNumber = "218">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -150,12 +150,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EmojiSelectKB/ButtonLayoutManager.swift"
-            timestampString = "434850338.34347"
+            timestampString = "434904378.236843"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "initializeQuadrants()"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "initializeGrid()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -166,59 +166,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EmojiSelectKB/ButtonLayoutManager.swift"
-            timestampString = "434850338.34347"
+            timestampString = "434904378.236843"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "initializeQuadrants()"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "initializeGrid()"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EmojiSelectKB/ButtonLayoutManager.swift"
-            timestampString = "434850574.992091"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "updateConstraints()"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EmojiSelectKB.ButtonLayoutManager.updateConstraints (EmojiSelectKB.ButtonLayoutManager)() -&gt; ()"
-                  moduleName = "EmojiSelectKB"
-                  urlString = "file:///Users/chris/Dropbox/Code/repos/emoji_keyboard/EmojiKeyboard/EmojiSelectKB/ButtonLayoutManager.swift"
-                  timestampString = "434770428.18662"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "3857">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EmojiSelectKB.ButtonLayoutManager.updateConstraints (EmojiSelectKB.ButtonLayoutManager)() -&gt; ()"
-                  moduleName = "EmojiSelectKB"
-                  urlString = "file:///Users/chris/Dropbox/Code/repos/emoji_keyboard/EmojiKeyboard/EmojiSelectKB/ButtonLayoutManager.swift"
-                  timestampString = "434770428.188231"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "4118">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -244,12 +198,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EmojiSelectKB/ButtonLayoutManager.swift"
-            timestampString = "434850574.992091"
+            timestampString = "434904378.236843"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "diminishInsertionLabel()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EmojiSelectKB/ButtonLayoutManager.swift"
+            timestampString = "434904378.236843"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "ButtonLayoutManager"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EmojiSelectKB/ButtonLayoutManager.swift"
+            timestampString = "434904378.236843"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "getInterbuttonConstraints(_:row:col:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

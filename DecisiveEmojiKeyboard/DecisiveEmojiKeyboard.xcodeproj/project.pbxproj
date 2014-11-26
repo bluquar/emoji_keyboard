@@ -1,0 +1,677 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83039A3B1A255CC8003DE3FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83039A3A1A255CC8003DE3FD /* AppDelegate.swift */; };
+		83039A3D1A255CC8003DE3FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83039A3C1A255CC8003DE3FD /* ViewController.swift */; };
+		83039A401A255CC8003DE3FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83039A3E1A255CC8003DE3FD /* Main.storyboard */; };
+		83039A421A255CC8003DE3FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83039A411A255CC8003DE3FD /* Images.xcassets */; };
+		83039A451A255CC8003DE3FD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83039A431A255CC8003DE3FD /* LaunchScreen.xib */; };
+		83039A511A255CC8003DE3FD /* DecisiveEmojiKeyboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83039A501A255CC8003DE3FD /* DecisiveEmojiKeyboardTests.swift */; };
+		83039A631A255D16003DE3FD /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83039A621A255D16003DE3FD /* KeyboardViewController.swift */; };
+		83039A661A255D16003DE3FD /* DEKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 83039A5E1A255D16003DE3FD /* DEKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		83039A6C1A2568A4003DE3FD /* ButtonLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83039A6B1A2568A4003DE3FD /* ButtonLayoutManager.swift */; };
+		83039A6E1A25699C003DE3FD /* EmojiInsertionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83039A6D1A25699C003DE3FD /* EmojiInsertionManager.swift */; };
+		83039A701A256C82003DE3FD /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83039A6F1A256C82003DE3FD /* SettingsManager.swift */; };
+		83039A721A256E91003DE3FD /* EmojiSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83039A711A256E91003DE3FD /* EmojiSelectionController.swift */; };
+		83039A741A256EF4003DE3FD /* SelectionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83039A731A256EF4003DE3FD /* SelectionOption.swift */; };
+		83039A761A256F45003DE3FD /* EmojiScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83039A751A256F45003DE3FD /* EmojiScore.swift */; };
+		83039A911A257083003DE3FD /* all_emojis.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 83039A771A257083003DE3FD /* all_emojis.rtf */; };
+		83039A921A257083003DE3FD /* bluecandle.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A781A257083003DE3FD /* bluecandle.png */; };
+		83039A931A257083003DE3FD /* blueheart.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A791A257083003DE3FD /* blueheart.png */; };
+		83039A941A257083003DE3FD /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A7A1A257083003DE3FD /* clock.png */; };
+		83039A951A257083003DE3FD /* creeper.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A7B1A257083003DE3FD /* creeper.png */; };
+		83039A961A257083003DE3FD /* cry.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A7C1A257083003DE3FD /* cry.png */; };
+		83039A971A257083003DE3FD /* cute.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A7D1A257083003DE3FD /* cute.png */; };
+		83039A981A257083003DE3FD /* cutelegs.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A7E1A257083003DE3FD /* cutelegs.png */; };
+		83039A991A257083003DE3FD /* demon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A7F1A257083003DE3FD /* demon.png */; };
+		83039A9A1A257083003DE3FD /* ears.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A801A257083003DE3FD /* ears.png */; };
+		83039A9B1A257083003DE3FD /* fistbumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A811A257083003DE3FD /* fistbumb.png */; };
+		83039A9C1A257083003DE3FD /* flower.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A821A257083003DE3FD /* flower.png */; };
+		83039A9D1A257083003DE3FD /* granite.gif in Resources */ = {isa = PBXBuildFile; fileRef = 83039A831A257083003DE3FD /* granite.gif */; };
+		83039A9E1A257083003DE3FD /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A841A257083003DE3FD /* heart.png */; };
+		83039A9F1A257083003DE3FD /* kitten.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A851A257083003DE3FD /* kitten.png */; };
+		83039AA01A257083003DE3FD /* kittenpresent.gif in Resources */ = {isa = PBXBuildFile; fileRef = 83039A861A257083003DE3FD /* kittenpresent.gif */; };
+		83039AA11A257083003DE3FD /* playfulkitten.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A871A257083003DE3FD /* playfulkitten.png */; };
+		83039AA21A257083003DE3FD /* present.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A881A257083003DE3FD /* present.png */; };
+		83039AA31A257083003DE3FD /* sadface.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A891A257083003DE3FD /* sadface.png */; };
+		83039AA41A257083003DE3FD /* skullxbones.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A8A1A257083003DE3FD /* skullxbones.png */; };
+		83039AA51A257083003DE3FD /* surfboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A8B1A257083003DE3FD /* surfboard.png */; };
+		83039AA61A257083003DE3FD /* taco.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A8C1A257083003DE3FD /* taco.png */; };
+		83039AA71A257083003DE3FD /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A8D1A257083003DE3FD /* tree.png */; };
+		83039AA81A257083003DE3FD /* troll.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A8E1A257083003DE3FD /* troll.png */; };
+		83039AA91A257083003DE3FD /* water.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 83039A8F1A257083003DE3FD /* water.PNG */; };
+		83039AAA1A257083003DE3FD /* zebra.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A901A257083003DE3FD /* zebra.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83039A4B1A255CC8003DE3FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83039A2D1A255CC8003DE3FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83039A341A255CC8003DE3FD;
+			remoteInfo = DecisiveEmojiKeyboard;
+		};
+		83039A641A255D16003DE3FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83039A2D1A255CC8003DE3FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83039A5D1A255D16003DE3FD;
+			remoteInfo = DEKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		83039A6A1A255D16003DE3FD /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				83039A661A255D16003DE3FD /* DEKeyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		83039A351A255CC8003DE3FD /* DecisiveEmojiKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecisiveEmojiKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83039A391A255CC8003DE3FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83039A3A1A255CC8003DE3FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		83039A3C1A255CC8003DE3FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		83039A3F1A255CC8003DE3FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		83039A411A255CC8003DE3FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		83039A441A255CC8003DE3FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		83039A4A1A255CC8003DE3FD /* DecisiveEmojiKeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecisiveEmojiKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83039A4F1A255CC8003DE3FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83039A501A255CC8003DE3FD /* DecisiveEmojiKeyboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisiveEmojiKeyboardTests.swift; sourceTree = "<group>"; };
+		83039A5E1A255D16003DE3FD /* DEKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DEKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		83039A611A255D16003DE3FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83039A621A255D16003DE3FD /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		83039A6B1A2568A4003DE3FD /* ButtonLayoutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonLayoutManager.swift; sourceTree = "<group>"; };
+		83039A6D1A25699C003DE3FD /* EmojiInsertionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiInsertionManager.swift; sourceTree = "<group>"; };
+		83039A6F1A256C82003DE3FD /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		83039A711A256E91003DE3FD /* EmojiSelectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiSelectionController.swift; sourceTree = "<group>"; };
+		83039A731A256EF4003DE3FD /* SelectionOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionOption.swift; sourceTree = "<group>"; };
+		83039A751A256F45003DE3FD /* EmojiScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiScore.swift; sourceTree = "<group>"; };
+		83039A771A257083003DE3FD /* all_emojis.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = all_emojis.rtf; sourceTree = "<group>"; };
+		83039A781A257083003DE3FD /* bluecandle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluecandle.png; sourceTree = "<group>"; };
+		83039A791A257083003DE3FD /* blueheart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueheart.png; sourceTree = "<group>"; };
+		83039A7A1A257083003DE3FD /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
+		83039A7B1A257083003DE3FD /* creeper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = creeper.png; sourceTree = "<group>"; };
+		83039A7C1A257083003DE3FD /* cry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cry.png; sourceTree = "<group>"; };
+		83039A7D1A257083003DE3FD /* cute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cute.png; sourceTree = "<group>"; };
+		83039A7E1A257083003DE3FD /* cutelegs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutelegs.png; sourceTree = "<group>"; };
+		83039A7F1A257083003DE3FD /* demon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demon.png; sourceTree = "<group>"; };
+		83039A801A257083003DE3FD /* ears.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ears.png; sourceTree = "<group>"; };
+		83039A811A257083003DE3FD /* fistbumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fistbumb.png; sourceTree = "<group>"; };
+		83039A821A257083003DE3FD /* flower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flower.png; sourceTree = "<group>"; };
+		83039A831A257083003DE3FD /* granite.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = granite.gif; sourceTree = "<group>"; };
+		83039A841A257083003DE3FD /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		83039A851A257083003DE3FD /* kitten.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kitten.png; sourceTree = "<group>"; };
+		83039A861A257083003DE3FD /* kittenpresent.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = kittenpresent.gif; sourceTree = "<group>"; };
+		83039A871A257083003DE3FD /* playfulkitten.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playfulkitten.png; sourceTree = "<group>"; };
+		83039A881A257083003DE3FD /* present.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = present.png; sourceTree = "<group>"; };
+		83039A891A257083003DE3FD /* sadface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sadface.png; sourceTree = "<group>"; };
+		83039A8A1A257083003DE3FD /* skullxbones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skullxbones.png; sourceTree = "<group>"; };
+		83039A8B1A257083003DE3FD /* surfboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = surfboard.png; sourceTree = "<group>"; };
+		83039A8C1A257083003DE3FD /* taco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taco.png; sourceTree = "<group>"; };
+		83039A8D1A257083003DE3FD /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
+		83039A8E1A257083003DE3FD /* troll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = troll.png; sourceTree = "<group>"; };
+		83039A8F1A257083003DE3FD /* water.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = water.PNG; sourceTree = "<group>"; };
+		83039A901A257083003DE3FD /* zebra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zebra.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83039A321A255CC8003DE3FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83039A471A255CC8003DE3FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83039A5B1A255D16003DE3FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83039A2C1A255CC8003DE3FD = {
+			isa = PBXGroup;
+			children = (
+				83039A371A255CC8003DE3FD /* DecisiveEmojiKeyboard */,
+				83039A5F1A255D16003DE3FD /* DEKeyboard */,
+				83039A361A255CC8003DE3FD /* Products */,
+				83039A4D1A255CC8003DE3FD /* DecisiveEmojiKeyboardTests */,
+			);
+			sourceTree = "<group>";
+		};
+		83039A361A255CC8003DE3FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83039A351A255CC8003DE3FD /* DecisiveEmojiKeyboard.app */,
+				83039A4A1A255CC8003DE3FD /* DecisiveEmojiKeyboardTests.xctest */,
+				83039A5E1A255D16003DE3FD /* DEKeyboard.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83039A371A255CC8003DE3FD /* DecisiveEmojiKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				83039A3A1A255CC8003DE3FD /* AppDelegate.swift */,
+				83039A3C1A255CC8003DE3FD /* ViewController.swift */,
+				83039A3E1A255CC8003DE3FD /* Main.storyboard */,
+				83039A411A255CC8003DE3FD /* Images.xcassets */,
+				83039A431A255CC8003DE3FD /* LaunchScreen.xib */,
+				83039A381A255CC8003DE3FD /* Supporting Files */,
+			);
+			path = DecisiveEmojiKeyboard;
+			sourceTree = "<group>";
+		};
+		83039A381A255CC8003DE3FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83039A391A255CC8003DE3FD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83039A4D1A255CC8003DE3FD /* DecisiveEmojiKeyboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				83039A501A255CC8003DE3FD /* DecisiveEmojiKeyboardTests.swift */,
+				83039A4E1A255CC8003DE3FD /* Supporting Files */,
+			);
+			path = DecisiveEmojiKeyboardTests;
+			sourceTree = "<group>";
+		};
+		83039A4E1A255CC8003DE3FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83039A4F1A255CC8003DE3FD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83039A5F1A255D16003DE3FD /* DEKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				83039A621A255D16003DE3FD /* KeyboardViewController.swift */,
+				83039A6B1A2568A4003DE3FD /* ButtonLayoutManager.swift */,
+				83039A6D1A25699C003DE3FD /* EmojiInsertionManager.swift */,
+				83039A751A256F45003DE3FD /* EmojiScore.swift */,
+				83039A711A256E91003DE3FD /* EmojiSelectionController.swift */,
+				83039A731A256EF4003DE3FD /* SelectionOption.swift */,
+				83039A6F1A256C82003DE3FD /* SettingsManager.swift */,
+				83039A601A255D16003DE3FD /* Supporting Files */,
+			);
+			path = DEKeyboard;
+			sourceTree = "<group>";
+		};
+		83039A601A255D16003DE3FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83039A771A257083003DE3FD /* all_emojis.rtf */,
+				83039A781A257083003DE3FD /* bluecandle.png */,
+				83039A791A257083003DE3FD /* blueheart.png */,
+				83039A7A1A257083003DE3FD /* clock.png */,
+				83039A7B1A257083003DE3FD /* creeper.png */,
+				83039A7C1A257083003DE3FD /* cry.png */,
+				83039A7D1A257083003DE3FD /* cute.png */,
+				83039A7E1A257083003DE3FD /* cutelegs.png */,
+				83039A7F1A257083003DE3FD /* demon.png */,
+				83039A801A257083003DE3FD /* ears.png */,
+				83039A811A257083003DE3FD /* fistbumb.png */,
+				83039A821A257083003DE3FD /* flower.png */,
+				83039A831A257083003DE3FD /* granite.gif */,
+				83039A841A257083003DE3FD /* heart.png */,
+				83039A851A257083003DE3FD /* kitten.png */,
+				83039A861A257083003DE3FD /* kittenpresent.gif */,
+				83039A871A257083003DE3FD /* playfulkitten.png */,
+				83039A881A257083003DE3FD /* present.png */,
+				83039A891A257083003DE3FD /* sadface.png */,
+				83039A8A1A257083003DE3FD /* skullxbones.png */,
+				83039A8B1A257083003DE3FD /* surfboard.png */,
+				83039A8C1A257083003DE3FD /* taco.png */,
+				83039A8D1A257083003DE3FD /* tree.png */,
+				83039A8E1A257083003DE3FD /* troll.png */,
+				83039A8F1A257083003DE3FD /* water.PNG */,
+				83039A901A257083003DE3FD /* zebra.png */,
+				83039A611A255D16003DE3FD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83039A341A255CC8003DE3FD /* DecisiveEmojiKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83039A541A255CC8003DE3FD /* Build configuration list for PBXNativeTarget "DecisiveEmojiKeyboard" */;
+			buildPhases = (
+				83039A311A255CC8003DE3FD /* Sources */,
+				83039A321A255CC8003DE3FD /* Frameworks */,
+				83039A331A255CC8003DE3FD /* Resources */,
+				83039A6A1A255D16003DE3FD /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83039A651A255D16003DE3FD /* PBXTargetDependency */,
+			);
+			name = DecisiveEmojiKeyboard;
+			productName = DecisiveEmojiKeyboard;
+			productReference = 83039A351A255CC8003DE3FD /* DecisiveEmojiKeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		83039A491A255CC8003DE3FD /* DecisiveEmojiKeyboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83039A571A255CC8003DE3FD /* Build configuration list for PBXNativeTarget "DecisiveEmojiKeyboardTests" */;
+			buildPhases = (
+				83039A461A255CC8003DE3FD /* Sources */,
+				83039A471A255CC8003DE3FD /* Frameworks */,
+				83039A481A255CC8003DE3FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83039A4C1A255CC8003DE3FD /* PBXTargetDependency */,
+			);
+			name = DecisiveEmojiKeyboardTests;
+			productName = DecisiveEmojiKeyboardTests;
+			productReference = 83039A4A1A255CC8003DE3FD /* DecisiveEmojiKeyboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		83039A5D1A255D16003DE3FD /* DEKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83039A671A255D16003DE3FD /* Build configuration list for PBXNativeTarget "DEKeyboard" */;
+			buildPhases = (
+				83039A5A1A255D16003DE3FD /* Sources */,
+				83039A5B1A255D16003DE3FD /* Frameworks */,
+				83039A5C1A255D16003DE3FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DEKeyboard;
+			productName = DEKeyboard;
+			productReference = 83039A5E1A255D16003DE3FD /* DEKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83039A2D1A255CC8003DE3FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Chris Barker";
+				TargetAttributes = {
+					83039A341A255CC8003DE3FD = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					83039A491A255CC8003DE3FD = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 83039A341A255CC8003DE3FD;
+					};
+					83039A5D1A255D16003DE3FD = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 83039A301A255CC8003DE3FD /* Build configuration list for PBXProject "DecisiveEmojiKeyboard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83039A2C1A255CC8003DE3FD;
+			productRefGroup = 83039A361A255CC8003DE3FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83039A341A255CC8003DE3FD /* DecisiveEmojiKeyboard */,
+				83039A491A255CC8003DE3FD /* DecisiveEmojiKeyboardTests */,
+				83039A5D1A255D16003DE3FD /* DEKeyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83039A331A255CC8003DE3FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83039A401A255CC8003DE3FD /* Main.storyboard in Resources */,
+				83039A451A255CC8003DE3FD /* LaunchScreen.xib in Resources */,
+				83039A421A255CC8003DE3FD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83039A481A255CC8003DE3FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83039A5C1A255D16003DE3FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83039A9C1A257083003DE3FD /* flower.png in Resources */,
+				83039A961A257083003DE3FD /* cry.png in Resources */,
+				83039AA11A257083003DE3FD /* playfulkitten.png in Resources */,
+				83039A9B1A257083003DE3FD /* fistbumb.png in Resources */,
+				83039A941A257083003DE3FD /* clock.png in Resources */,
+				83039A9E1A257083003DE3FD /* heart.png in Resources */,
+				83039AA01A257083003DE3FD /* kittenpresent.gif in Resources */,
+				83039A9F1A257083003DE3FD /* kitten.png in Resources */,
+				83039AA41A257083003DE3FD /* skullxbones.png in Resources */,
+				83039A951A257083003DE3FD /* creeper.png in Resources */,
+				83039AA51A257083003DE3FD /* surfboard.png in Resources */,
+				83039AA21A257083003DE3FD /* present.png in Resources */,
+				83039A981A257083003DE3FD /* cutelegs.png in Resources */,
+				83039A931A257083003DE3FD /* blueheart.png in Resources */,
+				83039AA61A257083003DE3FD /* taco.png in Resources */,
+				83039A9D1A257083003DE3FD /* granite.gif in Resources */,
+				83039AA71A257083003DE3FD /* tree.png in Resources */,
+				83039AA81A257083003DE3FD /* troll.png in Resources */,
+				83039A921A257083003DE3FD /* bluecandle.png in Resources */,
+				83039A9A1A257083003DE3FD /* ears.png in Resources */,
+				83039A911A257083003DE3FD /* all_emojis.rtf in Resources */,
+				83039A991A257083003DE3FD /* demon.png in Resources */,
+				83039AA91A257083003DE3FD /* water.PNG in Resources */,
+				83039AA31A257083003DE3FD /* sadface.png in Resources */,
+				83039AAA1A257083003DE3FD /* zebra.png in Resources */,
+				83039A971A257083003DE3FD /* cute.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83039A311A255CC8003DE3FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83039A3D1A255CC8003DE3FD /* ViewController.swift in Sources */,
+				83039A3B1A255CC8003DE3FD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83039A461A255CC8003DE3FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83039A511A255CC8003DE3FD /* DecisiveEmojiKeyboardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83039A5A1A255D16003DE3FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83039A701A256C82003DE3FD /* SettingsManager.swift in Sources */,
+				83039A741A256EF4003DE3FD /* SelectionOption.swift in Sources */,
+				83039A631A255D16003DE3FD /* KeyboardViewController.swift in Sources */,
+				83039A761A256F45003DE3FD /* EmojiScore.swift in Sources */,
+				83039A721A256E91003DE3FD /* EmojiSelectionController.swift in Sources */,
+				83039A6C1A2568A4003DE3FD /* ButtonLayoutManager.swift in Sources */,
+				83039A6E1A25699C003DE3FD /* EmojiInsertionManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83039A4C1A255CC8003DE3FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83039A341A255CC8003DE3FD /* DecisiveEmojiKeyboard */;
+			targetProxy = 83039A4B1A255CC8003DE3FD /* PBXContainerItemProxy */;
+		};
+		83039A651A255D16003DE3FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83039A5D1A255D16003DE3FD /* DEKeyboard */;
+			targetProxy = 83039A641A255D16003DE3FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		83039A3E1A255CC8003DE3FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83039A3F1A255CC8003DE3FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		83039A431A255CC8003DE3FD /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83039A441A255CC8003DE3FD /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83039A521A255CC8003DE3FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		83039A531A255CC8003DE3FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83039A551A255CC8003DE3FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = DecisiveEmojiKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		83039A561A255CC8003DE3FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = DecisiveEmojiKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		83039A581A255CC8003DE3FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DecisiveEmojiKeyboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DecisiveEmojiKeyboard.app/DecisiveEmojiKeyboard";
+			};
+			name = Debug;
+		};
+		83039A591A255CC8003DE3FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DecisiveEmojiKeyboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DecisiveEmojiKeyboard.app/DecisiveEmojiKeyboard";
+			};
+			name = Release;
+		};
+		83039A681A255D16003DE3FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DEKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		83039A691A255D16003DE3FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DEKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83039A301A255CC8003DE3FD /* Build configuration list for PBXProject "DecisiveEmojiKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83039A521A255CC8003DE3FD /* Debug */,
+				83039A531A255CC8003DE3FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83039A541A255CC8003DE3FD /* Build configuration list for PBXNativeTarget "DecisiveEmojiKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83039A551A255CC8003DE3FD /* Debug */,
+				83039A561A255CC8003DE3FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		83039A571A255CC8003DE3FD /* Build configuration list for PBXNativeTarget "DecisiveEmojiKeyboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83039A581A255CC8003DE3FD /* Debug */,
+				83039A591A255CC8003DE3FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		83039A671A255D16003DE3FD /* Build configuration list for PBXNativeTarget "DEKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83039A681A255D16003DE3FD /* Debug */,
+				83039A691A255D16003DE3FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83039A2D1A255CC8003DE3FD /* Project object */;
+}

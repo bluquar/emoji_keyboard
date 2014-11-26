@@ -9,30 +9,36 @@
 import UIKit
 
 protocol ButtonSource {
-    func setRowsCols(rows: Int, cols: Int) -> Void
-    func updateState(row: Int, col: Int) -> String?
-    func getImage(row: Int, col: Int) -> UIImage?
+    func getOptions(count: Int) -> [SelectionOption]
+}
+
+protocol EmojiDecisionMaker {
+    func buttonPressed(row: Int, col: Int) -> String?
+}
+
+protocol EmojiInserter {
+    func insertEmoji(emoji: String) -> Void
 }
 
 class ButtonLayoutManager: NSObject {
-    
+    // Constants
     let rows: Int = 2
-    let cols: Int = 4
+    let cols: Int = 3
     let marginpx: CGFloat = 10
-    
-    var buttonSource: ButtonSource
-    var kbDelegate: KeyboardViewController
-    var view: UIView
-    
-    var nextKeyboardButton: UIButton!
-    var grid: [[KBButton]]
-    var insertionLabel: UILabel!
-    
-    var proxy: UITextDocumentProxy
-    
     let insertionLabelOpacityDecrement: CGFloat = 0.04
     let insertionLabelOpacityTimeDelta: UInt64 = 25 * NSEC_PER_MSEC
     let insertionLabelOpacityStart: CGFloat = 0.6
+    
+    // Delegates & External objects
+    var buttonSource: ButtonSource
+    var kbDelegate: KeyboardViewController
+    var view: UIView
+    var proxy: UITextDocumentProxy
+    
+    // UI Components
+    var nextKeyboardButton: UIButton!
+    var grid: [[KBButton]]
+    var insertionLabel: UILabel!
     
     init(view: UIView, proxy: UITextDocumentProxy, buttonSource: EmojiSelectionController,
         kbdelegate: KeyboardViewController) {
@@ -67,6 +73,7 @@ class ButtonLayoutManager: NSObject {
     
     func clearGrid() {
         // TODO: Remove existing KBButton items from self.view
+        // (unnecessary for now since we use a static, predefined grid size)
         self.grid = []
     }
     

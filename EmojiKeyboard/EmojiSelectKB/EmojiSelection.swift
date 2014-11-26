@@ -16,7 +16,7 @@ class EmojiSelection: NSObject {
     
     init(path: String, associations: [String: Int]) {
         self.weights = EmojiRatingMap(mapping: associations)
-        self.image = UIImage(named: path)
+        self.image = UIImage(named: path)!
     }
     
     func update(mapping: EmojiRatingMap) {

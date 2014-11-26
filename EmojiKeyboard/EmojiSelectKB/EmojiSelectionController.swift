@@ -35,7 +35,25 @@ class EmojiSelectionController: NSObject, ButtonSource {
         EmojiSelection(path: "creeper.png", associations: ["🐍": 1, "🎃": 1, "🃏": 1, "🙀": 1, "😖": 1, "💥": 1]),
         EmojiSelection(path: "clock.png", associations: ["🚏":1, "🚥":1, "🌅":1, "🌌":1, "🔜":1, "🕐":1, "🕑":1, "🕒":1, "🕓":1, "🕔":1, "🕕":1, "🕖":1, "🕗":1, "🕘":1, "🕙":1, "🕚":1, "🕛":1, "🌒":1, "🌖":1, "🌗":1, "🌘":1, "🌚":1, "🌜":1, "🌝":1, "🌞":1, "🕜":1, "🕝":1, "🕞":1, "🕟":1, "🕠":1, "🕡":1, "🕢":1, "🕣":1, "🕤":1, "🕥":1, "🕦":1, "🕧":1]),
         EmojiSelection(path: "bluecandle.png", associations: ["🔅":  1, "🔥": 1, "🌋": 1, "🚨":1]),
-        EmojiSelection(path: "tree.png", associations: ["🌱": 1, "🌴": 2, "🌵":1, "🌷":1, "🌸":1, "🌹":1, "🌺":1, "🌻":1, "🌼":1, "🌽":1, "🌾":1, "🌿":2, "🍀":1, "🍁":1, "🍂":2, "🍃":1,"🎄":3, "🏡":1,"🌲":2, "🌳":2])
+        EmojiSelection(path: "tree.png", associations: ["🌱": 1, "🌴": 2, "🌵":1, "🌷":1, "🌸":1, "🌹":1, "🌺":1, "🌻":1, "🌼":1, "🌽":1, "🌾":1, "🌿":2, "🍀":1, "🍁":1, "🍂":2, "🍃":1,"🎄":3, "🏡":1,"🌲":2, "🌳":2]),
+        EmojiSelection(path: "blueheart.png", associations: ["💛":  1, "💙": 3, "💜": 1, "💚":1, "❤️": 1, "💗": 1, "💓": 1, "💕": 1, "💖": 1, "💞":1, "💘":1, "💌":1]),
+        EmojiSelection(path: "cry.png", associations: ["😢":  1, "😂": 1, "😭": 1, "😪":1, "😥": 1, "😰": 1, "😫":1, "😖": 1]),
+        EmojiSelection(path: "cute.png", associations: ["🐱":  1, "🐭": 1, "🐯": 1, "🐇":1]),
+        EmojiSelection(path: "cutelegs.png", associations: ["🐇":  1, "🐱": 1, "😼": 1, "🙀":1]),
+        EmojiSelection(path: "fistbumb.png", associations: ["👊":  3, "👍": 2, "✊": 1, "👌":1]),
+        EmojiSelection(path: "flower.png", associations: ["💐":  1, "🌸": 1, "🌷": 1, "🌹":1, "🌻": 1, "🌺":1]),
+        EmojiSelection(path: "granite.gif", associations: ["▪️":  1, "🔥": 1, "🌋": 1, "🚨":1]),
+        EmojiSelection(path: "heart.png", associations: ["💛":  1, "💙": 1, "💜": 1, "💚":1, "❤️": 2, "💗": 2, "💓": 2, "💕": 1, "💖": 1, "💞":1, "💘":1, "💌":1]),
+        EmojiSelection(path: "kittenpresent.gif", associations: ["🐱":  1, "😺": 1, "😸": 1, "🎁":1]),
+        EmojiSelection(path: "present.png", associations: ["🎁":  1, "🔆": 1, "🌋": 1, "🚨":1]),
+        EmojiSelection(path: "sadface.png", associations: ["🔅":  1, "🔥": 1, "🌋": 1, "🚨":1]),
+        EmojiSelection(path: "skullxbones.png", associations: ["🔅":  1, "🔥": 1, "🌋": 1, "🚨":1]),
+        EmojiSelection(path: "surfboard.png", associations: ["🔅":  1, "🔥": 1, "🌋": 1, "🚨":1]),
+        EmojiSelection(path: "taco.png", associations: ["🔅":  1, "🔥": 1, "🌋": 1, "🚨":1]),
+        EmojiSelection(path: "troll.png", associations: ["🔅":  1, "🔥": 1, "🌋": 1, "🚨":1]),
+        EmojiSelection(path: "zebra.png", associations: ["🔅":  1, "🔥": 1, "🌋": 1, "🚨":1]),
+        EmojiSelection(path: "mikeg.png", associations: ["🐱": 10]),
+        EmojiSelection(path: "sally.png", associations: ["🐠": 1]),
     ]
     
     override init() {

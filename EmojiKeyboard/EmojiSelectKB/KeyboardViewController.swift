@@ -18,7 +18,7 @@ class KeyboardViewController: UIInputViewController {
         super.init()
         self.emojiSelectionController = EmojiSelectionController()
     }
-
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.emojiSelectionController = EmojiSelectionController()

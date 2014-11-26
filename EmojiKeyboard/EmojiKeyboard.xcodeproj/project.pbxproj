@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8317EC7219EC8BBB004DD075 /* blueheart.png in Resources */ = {isa = PBXBuildFile; fileRef = 8317EC7119EC8BBB004DD075 /* blueheart.png */; };
+		8317EC7419EC8BC3004DD075 /* cry.png in Resources */ = {isa = PBXBuildFile; fileRef = 8317EC7319EC8BC3004DD075 /* cry.png */; };
+		8317EC7619EC8BCE004DD075 /* cute.png in Resources */ = {isa = PBXBuildFile; fileRef = 8317EC7519EC8BCE004DD075 /* cute.png */; };
+		8317EC7819EC8BD7004DD075 /* cutelegs.png in Resources */ = {isa = PBXBuildFile; fileRef = 8317EC7719EC8BD7004DD075 /* cutelegs.png */; };
+		8317EC7A19EC8BE0004DD075 /* fistbumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 8317EC7919EC8BE0004DD075 /* fistbumb.png */; };
+		8317EC7C19EC8BE8004DD075 /* flower.png in Resources */ = {isa = PBXBuildFile; fileRef = 8317EC7B19EC8BE8004DD075 /* flower.png */; };
+		8317EC7E19EC8C06004DD075 /* granite.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8317EC7D19EC8C06004DD075 /* granite.gif */; };
+		8317EC8019EC8C0E004DD075 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 8317EC7F19EC8C0E004DD075 /* heart.png */; };
+		8317EC8219EC8C17004DD075 /* kittenpresent.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8317EC8119EC8C17004DD075 /* kittenpresent.gif */; };
+		8317EC8419EC8C27004DD075 /* present.png in Resources */ = {isa = PBXBuildFile; fileRef = 8317EC8319EC8C27004DD075 /* present.png */; };
+		8317EC8619EC8C31004DD075 /* sadface.png in Resources */ = {isa = PBXBuildFile; fileRef = 8317EC8519EC8C31004DD075 /* sadface.png */; };
+		8317EC8A19EC8C43004DD075 /* skullxbones.png in Resources */ = {isa = PBXBuildFile; fileRef = 8317EC8919EC8C43004DD075 /* skullxbones.png */; };
+		8317EC8C19EC8C4B004DD075 /* surfboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 8317EC8B19EC8C4B004DD075 /* surfboard.png */; };
+		8317EC8E19EC8C54004DD075 /* taco.png in Resources */ = {isa = PBXBuildFile; fileRef = 8317EC8D19EC8C54004DD075 /* taco.png */; };
+		8317EC9019EC8C5D004DD075 /* troll.png in Resources */ = {isa = PBXBuildFile; fileRef = 8317EC8F19EC8C5D004DD075 /* troll.png */; };
+		8317EC9219EC8C65004DD075 /* zebra.png in Resources */ = {isa = PBXBuildFile; fileRef = 8317EC9119EC8C65004DD075 /* zebra.png */; };
 		832DCF9619E7884700B74948 /* KBNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832DCF9519E7884700B74948 /* KBNib.xib */; };
 		832DCF9819E7893000B74948 /* CustomKeyboardInterface.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832DCF9719E7893000B74948 /* CustomKeyboardInterface.xib */; };
 		8375639519DDF8660065330F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375639419DDF8660065330F /* AppDelegate.swift */; };
@@ -27,7 +43,6 @@
 		839E5F7119EAFDDD00283AEB /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 839E5F7019EAFDDD00283AEB /* clock.png */; };
 		839E5F7319EAFFB700283AEB /* bluecandle.png in Resources */ = {isa = PBXBuildFile; fileRef = 839E5F7219EAFFB700283AEB /* bluecandle.png */; };
 		839E5F7519EB007000283AEB /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 839E5F7419EB007000283AEB /* tree.png */; };
-		83ACDEBB19E23E920060EDA6 /* ButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACDEBA19E23E920060EDA6 /* ButtonSpec.swift */; };
 		83ACDEBD19E241070060EDA6 /* EmojiSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACDEBC19E241070060EDA6 /* EmojiSelectionController.swift */; };
 		83ACDEBF19E2444A0060EDA6 /* EmojiRatingMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACDEBE19E2444A0060EDA6 /* EmojiRatingMap.swift */; };
 		83AE328F19E9F2AB00BA459D /* ears.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AE328E19E9F2AA00BA459D /* ears.png */; };
@@ -74,6 +89,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8317EC7119EC8BBB004DD075 /* blueheart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueheart.png; sourceTree = "<group>"; };
+		8317EC7319EC8BC3004DD075 /* cry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cry.png; sourceTree = "<group>"; };
+		8317EC7519EC8BCE004DD075 /* cute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cute.png; sourceTree = "<group>"; };
+		8317EC7719EC8BD7004DD075 /* cutelegs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutelegs.png; sourceTree = "<group>"; };
+		8317EC7919EC8BE0004DD075 /* fistbumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fistbumb.png; sourceTree = "<group>"; };
+		8317EC7B19EC8BE8004DD075 /* flower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flower.png; sourceTree = "<group>"; };
+		8317EC7D19EC8C06004DD075 /* granite.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = granite.gif; sourceTree = "<group>"; };
+		8317EC7F19EC8C0E004DD075 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		8317EC8119EC8C17004DD075 /* kittenpresent.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = kittenpresent.gif; sourceTree = "<group>"; };
+		8317EC8319EC8C27004DD075 /* present.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = present.png; sourceTree = "<group>"; };
+		8317EC8519EC8C31004DD075 /* sadface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sadface.png; sourceTree = "<group>"; };
+		8317EC8919EC8C43004DD075 /* skullxbones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skullxbones.png; sourceTree = "<group>"; };
+		8317EC8B19EC8C4B004DD075 /* surfboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = surfboard.png; sourceTree = "<group>"; };
+		8317EC8D19EC8C54004DD075 /* taco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taco.png; sourceTree = "<group>"; };
+		8317EC8F19EC8C5D004DD075 /* troll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = troll.png; sourceTree = "<group>"; };
+		8317EC9119EC8C65004DD075 /* zebra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zebra.png; sourceTree = "<group>"; };
 		832DCF9519E7884700B74948 /* KBNib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KBNib.xib; sourceTree = "<group>"; };
 		832DCF9719E7893000B74948 /* CustomKeyboardInterface.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomKeyboardInterface.xib; sourceTree = "<group>"; };
 		832F767819E9BD0000C3B95E /* EmojiKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = EmojiKeyboard.entitlements; sourceTree = "<group>"; };
@@ -102,7 +133,6 @@
 		839E5F7019EAFDDD00283AEB /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
 		839E5F7219EAFFB700283AEB /* bluecandle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluecandle.png; sourceTree = "<group>"; };
 		839E5F7419EB007000283AEB /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
-		83ACDEBA19E23E920060EDA6 /* ButtonSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSpec.swift; sourceTree = "<group>"; };
 		83ACDEBC19E241070060EDA6 /* EmojiSelectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiSelectionController.swift; sourceTree = "<group>"; };
 		83ACDEBE19E2444A0060EDA6 /* EmojiRatingMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiRatingMap.swift; sourceTree = "<group>"; };
 		83ACDEC019E244620060EDA6 /* experiment.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = experiment.playground; sourceTree = "<group>"; };
@@ -207,15 +237,14 @@
 		837563BC19DDF91A0065330F /* EmojiSelectKB */ = {
 			isa = PBXGroup;
 			children = (
-				83AE329019E9FFC700BA459D /* EmojiSelection.swift */,
-				832F767919E9BD5A00C3B95E /* EmojiSelectKB.entitlements */,
 				837563BF19DDF91A0065330F /* KeyboardViewController.swift */,
-				83ACDEBA19E23E920060EDA6 /* ButtonSpec.swift */,
+				837563CC19DE21DC0065330F /* ButtonLayoutManager.swift */,
 				83ACDEBC19E241070060EDA6 /* EmojiSelectionController.swift */,
+				83AE329019E9FFC700BA459D /* EmojiSelection.swift */,
 				83ACDEBE19E2444A0060EDA6 /* EmojiRatingMap.swift */,
 				83ACDEC019E244620060EDA6 /* experiment.playground */,
-				837563CC19DE21DC0065330F /* ButtonLayoutManager.swift */,
 				837563CA19DDFD630065330F /* KBButton.swift */,
+				832F767919E9BD5A00C3B95E /* EmojiSelectKB.entitlements */,
 				837563BD19DDF91A0065330F /* Supporting Files */,
 			);
 			path = EmojiSelectKB;
@@ -224,6 +253,22 @@
 		837563BD19DDF91A0065330F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8317EC9119EC8C65004DD075 /* zebra.png */,
+				8317EC8F19EC8C5D004DD075 /* troll.png */,
+				8317EC8D19EC8C54004DD075 /* taco.png */,
+				8317EC8B19EC8C4B004DD075 /* surfboard.png */,
+				8317EC8919EC8C43004DD075 /* skullxbones.png */,
+				8317EC8519EC8C31004DD075 /* sadface.png */,
+				8317EC8319EC8C27004DD075 /* present.png */,
+				8317EC8119EC8C17004DD075 /* kittenpresent.gif */,
+				8317EC7F19EC8C0E004DD075 /* heart.png */,
+				8317EC7D19EC8C06004DD075 /* granite.gif */,
+				8317EC7B19EC8BE8004DD075 /* flower.png */,
+				8317EC7919EC8BE0004DD075 /* fistbumb.png */,
+				8317EC7719EC8BD7004DD075 /* cutelegs.png */,
+				8317EC7519EC8BCE004DD075 /* cute.png */,
+				8317EC7319EC8BC3004DD075 /* cry.png */,
+				8317EC7119EC8BBB004DD075 /* blueheart.png */,
 				839E5F7419EB007000283AEB /* tree.png */,
 				839E5F7219EAFFB700283AEB /* bluecandle.png */,
 				839E5F7019EAFDDD00283AEB /* clock.png */,
@@ -379,14 +424,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8317EC7419EC8BC3004DD075 /* cry.png in Resources */,
+				8317EC7A19EC8BE0004DD075 /* fistbumb.png in Resources */,
 				839E5F7319EAFFB700283AEB /* bluecandle.png in Resources */,
 				839E5F6B19EAFB3800283AEB /* playfulkitten.png in Resources */,
+				8317EC8619EC8C31004DD075 /* sadface.png in Resources */,
+				8317EC9019EC8C5D004DD075 /* troll.png in Resources */,
 				839E5F7519EB007000283AEB /* tree.png in Resources */,
+				8317EC7619EC8BCE004DD075 /* cute.png in Resources */,
+				8317EC7E19EC8C06004DD075 /* granite.gif in Resources */,
 				83AE328F19E9F2AB00BA459D /* ears.png in Resources */,
 				839E5F6D19EAFC5E00283AEB /* demon.png in Resources */,
+				8317EC8219EC8C17004DD075 /* kittenpresent.gif in Resources */,
+				8317EC8419EC8C27004DD075 /* present.png in Resources */,
+				8317EC8019EC8C0E004DD075 /* heart.png in Resources */,
+				8317EC7219EC8BBB004DD075 /* blueheart.png in Resources */,
+				8317EC8E19EC8C54004DD075 /* taco.png in Resources */,
+				8317EC8C19EC8C4B004DD075 /* surfboard.png in Resources */,
+				8317EC7819EC8BD7004DD075 /* cutelegs.png in Resources */,
+				8317EC8A19EC8C43004DD075 /* skullxbones.png in Resources */,
 				83AE329319EA1C0F00BA459D /* kitten.png in Resources */,
+				8317EC7C19EC8BE8004DD075 /* flower.png in Resources */,
 				839E5F6F19EAFCF500283AEB /* creeper.png in Resources */,
 				839E5F7119EAFDDD00283AEB /* clock.png in Resources */,
+				8317EC9219EC8C65004DD075 /* zebra.png in Resources */,
 				839E5F6919EAFA5000283AEB /* water.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,7 +481,6 @@
 				83AE329119E9FFC700BA459D /* EmojiSelection.swift in Sources */,
 				83ACDEBD19E241070060EDA6 /* EmojiSelectionController.swift in Sources */,
 				83ACDEBF19E2444A0060EDA6 /* EmojiRatingMap.swift in Sources */,
-				83ACDEBB19E23E920060EDA6 /* ButtonSpec.swift in Sources */,
 				837563C019DDF91A0065330F /* KeyboardViewController.swift in Sources */,
 				837563CD19DE21DC0065330F /* ButtonLayoutManager.swift in Sources */,
 			);

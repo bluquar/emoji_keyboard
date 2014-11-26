@@ -17,17 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sZG-N8-UL6">
-                                <rect key="frame" x="20" y="28" width="560" height="30"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ve8-uB-c91">
+                                <rect key="frame" x="16" y="40" width="568" height="128"/>
+                                <color key="backgroundColor" red="0.92052199720670391" green="0.92052199720670391" blue="0.92052199720670391" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="sZG-N8-UL6" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="2Q4-1Y-nh0"/>
-                            <constraint firstItem="sZG-N8-UL6" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="2hM-cL-sTL"/>
-                            <constraint firstItem="sZG-N8-UL6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="4" id="GzR-SM-TjK"/>
+                            <constraint firstItem="Ve8-uB-c91" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Y4h-YL-Cwf"/>
+                            <constraint firstItem="Ve8-uB-c91" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="nDz-h9-ebk"/>
+                            <constraint firstAttribute="centerX" secondItem="Ve8-uB-c91" secondAttribute="centerX" id="pbQ-Pk-ff1"/>
                         </constraints>
                     </view>
                 </viewController>

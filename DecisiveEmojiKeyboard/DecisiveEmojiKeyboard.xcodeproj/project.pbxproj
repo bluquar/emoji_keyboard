@@ -16,12 +16,10 @@
 		83039A631A255D16003DE3FD /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83039A621A255D16003DE3FD /* KeyboardViewController.swift */; };
 		83039A661A255D16003DE3FD /* DEKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 83039A5E1A255D16003DE3FD /* DEKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		83039A6C1A2568A4003DE3FD /* ButtonLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83039A6B1A2568A4003DE3FD /* ButtonLayoutManager.swift */; };
-		83039A6E1A25699C003DE3FD /* EmojiInsertionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83039A6D1A25699C003DE3FD /* EmojiInsertionManager.swift */; };
 		83039A701A256C82003DE3FD /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83039A6F1A256C82003DE3FD /* SettingsManager.swift */; };
 		83039A721A256E91003DE3FD /* EmojiSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83039A711A256E91003DE3FD /* EmojiSelectionController.swift */; };
 		83039A741A256EF4003DE3FD /* SelectionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83039A731A256EF4003DE3FD /* SelectionOption.swift */; };
 		83039A761A256F45003DE3FD /* EmojiScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83039A751A256F45003DE3FD /* EmojiScore.swift */; };
-		83039A911A257083003DE3FD /* all_emojis.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 83039A771A257083003DE3FD /* all_emojis.rtf */; };
 		83039A921A257083003DE3FD /* bluecandle.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A781A257083003DE3FD /* bluecandle.png */; };
 		83039A931A257083003DE3FD /* blueheart.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A791A257083003DE3FD /* blueheart.png */; };
 		83039A941A257083003DE3FD /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A7A1A257083003DE3FD /* clock.png */; };
@@ -47,6 +45,10 @@
 		83039AA81A257083003DE3FD /* troll.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A8E1A257083003DE3FD /* troll.png */; };
 		83039AA91A257083003DE3FD /* water.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 83039A8F1A257083003DE3FD /* water.PNG */; };
 		83039AAA1A257083003DE3FD /* zebra.png in Resources */ = {isa = PBXBuildFile; fileRef = 83039A901A257083003DE3FD /* zebra.png */; };
+		83039AAC1A269D8D003DE3FD /* ImageSelectionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83039AAB1A269D8D003DE3FD /* ImageSelectionOption.swift */; };
+		83039AAE1A26A6A4003DE3FD /* associations.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83039AAD1A26A6A4003DE3FD /* associations.txt */; };
+		831D57DD1A2959F100286001 /* EmojiSelectionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D57DC1A2959F100286001 /* EmojiSelectionOption.swift */; };
+		831D57DF1A29612500286001 /* TouchListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D57DE1A29612500286001 /* TouchListener.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,12 +97,10 @@
 		83039A611A255D16003DE3FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83039A621A255D16003DE3FD /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		83039A6B1A2568A4003DE3FD /* ButtonLayoutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonLayoutManager.swift; sourceTree = "<group>"; };
-		83039A6D1A25699C003DE3FD /* EmojiInsertionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiInsertionManager.swift; sourceTree = "<group>"; };
 		83039A6F1A256C82003DE3FD /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		83039A711A256E91003DE3FD /* EmojiSelectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiSelectionController.swift; sourceTree = "<group>"; };
 		83039A731A256EF4003DE3FD /* SelectionOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionOption.swift; sourceTree = "<group>"; };
 		83039A751A256F45003DE3FD /* EmojiScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiScore.swift; sourceTree = "<group>"; };
-		83039A771A257083003DE3FD /* all_emojis.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = all_emojis.rtf; sourceTree = "<group>"; };
 		83039A781A257083003DE3FD /* bluecandle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluecandle.png; sourceTree = "<group>"; };
 		83039A791A257083003DE3FD /* blueheart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueheart.png; sourceTree = "<group>"; };
 		83039A7A1A257083003DE3FD /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
@@ -126,6 +126,10 @@
 		83039A8E1A257083003DE3FD /* troll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = troll.png; sourceTree = "<group>"; };
 		83039A8F1A257083003DE3FD /* water.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = water.PNG; sourceTree = "<group>"; };
 		83039A901A257083003DE3FD /* zebra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zebra.png; sourceTree = "<group>"; };
+		83039AAB1A269D8D003DE3FD /* ImageSelectionOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSelectionOption.swift; sourceTree = "<group>"; };
+		83039AAD1A26A6A4003DE3FD /* associations.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = associations.txt; sourceTree = "<group>"; };
+		831D57DC1A2959F100286001 /* EmojiSelectionOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiSelectionOption.swift; sourceTree = "<group>"; };
+		831D57DE1A29612500286001 /* TouchListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchListener.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,12 +220,14 @@
 			children = (
 				83039A621A255D16003DE3FD /* KeyboardViewController.swift */,
 				83039A6B1A2568A4003DE3FD /* ButtonLayoutManager.swift */,
-				83039A6D1A25699C003DE3FD /* EmojiInsertionManager.swift */,
 				83039A751A256F45003DE3FD /* EmojiScore.swift */,
 				83039A711A256E91003DE3FD /* EmojiSelectionController.swift */,
+				831D57DC1A2959F100286001 /* EmojiSelectionOption.swift */,
+				83039AAB1A269D8D003DE3FD /* ImageSelectionOption.swift */,
 				83039A731A256EF4003DE3FD /* SelectionOption.swift */,
 				83039A6F1A256C82003DE3FD /* SettingsManager.swift */,
 				83039A601A255D16003DE3FD /* Supporting Files */,
+				831D57DE1A29612500286001 /* TouchListener.swift */,
 			);
 			path = DEKeyboard;
 			sourceTree = "<group>";
@@ -229,7 +235,6 @@
 		83039A601A255D16003DE3FD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				83039A771A257083003DE3FD /* all_emojis.rtf */,
 				83039A781A257083003DE3FD /* bluecandle.png */,
 				83039A791A257083003DE3FD /* blueheart.png */,
 				83039A7A1A257083003DE3FD /* clock.png */,
@@ -256,6 +261,7 @@
 				83039A8F1A257083003DE3FD /* water.PNG */,
 				83039A901A257083003DE3FD /* zebra.png */,
 				83039A611A255D16003DE3FD /* Info.plist */,
+				83039AAD1A26A6A4003DE3FD /* associations.txt */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -388,6 +394,7 @@
 				83039A9E1A257083003DE3FD /* heart.png in Resources */,
 				83039AA01A257083003DE3FD /* kittenpresent.gif in Resources */,
 				83039A9F1A257083003DE3FD /* kitten.png in Resources */,
+				83039AAE1A26A6A4003DE3FD /* associations.txt in Resources */,
 				83039AA41A257083003DE3FD /* skullxbones.png in Resources */,
 				83039A951A257083003DE3FD /* creeper.png in Resources */,
 				83039AA51A257083003DE3FD /* surfboard.png in Resources */,
@@ -400,7 +407,6 @@
 				83039AA81A257083003DE3FD /* troll.png in Resources */,
 				83039A921A257083003DE3FD /* bluecandle.png in Resources */,
 				83039A9A1A257083003DE3FD /* ears.png in Resources */,
-				83039A911A257083003DE3FD /* all_emojis.rtf in Resources */,
 				83039A991A257083003DE3FD /* demon.png in Resources */,
 				83039AA91A257083003DE3FD /* water.PNG in Resources */,
 				83039AA31A257083003DE3FD /* sadface.png in Resources */,
@@ -435,11 +441,13 @@
 			files = (
 				83039A701A256C82003DE3FD /* SettingsManager.swift in Sources */,
 				83039A741A256EF4003DE3FD /* SelectionOption.swift in Sources */,
+				831D57DD1A2959F100286001 /* EmojiSelectionOption.swift in Sources */,
 				83039A631A255D16003DE3FD /* KeyboardViewController.swift in Sources */,
 				83039A761A256F45003DE3FD /* EmojiScore.swift in Sources */,
 				83039A721A256E91003DE3FD /* EmojiSelectionController.swift in Sources */,
 				83039A6C1A2568A4003DE3FD /* ButtonLayoutManager.swift in Sources */,
-				83039A6E1A25699C003DE3FD /* EmojiInsertionManager.swift in Sources */,
+				83039AAC1A269D8D003DE3FD /* ImageSelectionOption.swift in Sources */,
+				831D57DF1A29612500286001 /* TouchListener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,6 +662,7 @@
 				83039A561A255CC8003DE3FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83039A571A255CC8003DE3FD /* Build configuration list for PBXNativeTarget "DecisiveEmojiKeyboardTests" */ = {
 			isa = XCConfigurationList;
@@ -662,6 +671,7 @@
 				83039A591A255CC8003DE3FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83039A671A255D16003DE3FD /* Build configuration list for PBXNativeTarget "DEKeyboard" */ = {
 			isa = XCConfigurationList;
@@ -670,6 +680,7 @@
 				83039A691A255D16003DE3FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

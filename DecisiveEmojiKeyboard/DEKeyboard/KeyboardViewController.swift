@@ -16,9 +16,26 @@ class KeyboardViewController: UIInputViewController {
 
     override init() {
         self.settings = SettingsManager()
-        self.emojiSelectionController = EmojiSelectionController
-        self.buttonLayoutManager = ButtonLayoutManager(self.emojiSelectionController!, self, self.settings!)
+        self.buttonLayoutManager = ButtonLayoutManager(settings: self.settings)
+        self.emojiSelectionController = EmojiSelectionController(buttonManager: self.buttonLayoutManager)
         super.init()
+        self.buttonLayoutManager.kbDelegate! = self
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        self.settings = SettingsManager()
+        self.buttonLayoutManager = ButtonLayoutManager(settings: self.settings)
+        self.emojiSelectionController = EmojiSelectionController(buttonManager: self.buttonLayoutManager)
+        super.init(coder: aDecoder)
+        self.buttonLayoutManager.kbDelegate! = self
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        self.settings = SettingsManager()
+        self.buttonLayoutManager = ButtonLayoutManager(settings: self.settings)
+        self.emojiSelectionController = EmojiSelectionController(buttonManager: self.buttonLayoutManager)
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        self.buttonLayoutManager.kbDelegate! = self
     }
     
     override func updateViewConstraints() {
@@ -26,24 +43,13 @@ class KeyboardViewController: UIInputViewController {
         self.buttonLayoutManager.updateViewConstraints()
     }
 
+    func insertText(emoji: String) -> Void {
+        (self.textDocumentProxy as UITextDocumentProxy).insertText(emoji)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let inserter = EmojiInsertionManager(self.textDocumentProxy as UITextDocumentProxy)
-        self.buttonLayoutManager.viewDidLoad(self.view, inserter)
+        self.buttonLayoutManager.viewDidLoad(self.view)
+        self.emojiSelectionController.viewDidLoad(self)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated
-    }
-
-    override func textWillChange(textInput: UITextInput) {
-        // The app is about to change the document's contents. Perform any preparation here.
-    }
-
-    override func textDidChange(textInput: UITextInput) {
-        // The app has just changed the document's contents, the document context has been updated.
-    }
-
 }

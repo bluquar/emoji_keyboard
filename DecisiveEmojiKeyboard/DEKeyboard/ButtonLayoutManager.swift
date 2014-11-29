@@ -8,14 +8,6 @@
 
 import UIKit
 
-protocol OptionSource {
-    func getOptions(count: Int) -> [SelectionOption]
-}
-
-protocol EmojiInserter {
-    func insertEmoji(emoji: String) -> Void
-}
-
 class ButtonLayoutManager: NSObject {
     // Constants
     let marginpx: CGFloat = 10
@@ -25,36 +17,36 @@ class ButtonLayoutManager: NSObject {
     
     // Delegates & External objects
     var view: UIView!
-    var emojiInserter: EmojiInserter!
-    var optionSource: OptionSource
-    var kbDelegate: KeyboardViewController
+    var kbDelegate: KeyboardViewController!
     var settings: SettingsManager
+    var options: [[SelectionOption?]]
     
     // UI Components
     var nextKeyboardButton: UIButton!
     var gridView: UIView!
-    var gridCells: [[UIView]]
+    var cells: [[UIView]]
+    var contentCells: [[UIView!]]
     var insertionLabel: UILabel!
     
-    init(optionSource: OptionSource, kbDelegate: KeyboardViewController, settings: SettingsManager) {
-            self.optionSource = optionSource
-            self.kbdelegate = kbDelegate
-            self.settings = settings
-            self.gridCells = []
-            
-            super.init()
+    init(settings: SettingsManager) {
+        self.settings = settings
+        self.cells = []
+        self.contentCells = []
+        self.options = []
+        super.init()
     }
     
-    func viewDidLoad(view: UIView, emojiInserter: EmojiInserter) {
+    func viewDidLoad(view: UIView) {
         self.view = view
-        self.emojiInserter = emojiInserter
         self.setupUI()
     }
     
     func setupUI() {
         self.initializeNextKBbutton()
-        self.initializeInsertionLabel()
-        self.initializeGrid()
+        // jesus fucking christ please work
+        //self.initializeInsertionLabel()
+        //self.initializeGrid()
+        self.view.layoutSubviews()
     }
     
     func initializeNextKBbutton() {
@@ -71,84 +63,122 @@ class ButtonLayoutManager: NSObject {
         self.view.addConstraints(constraints)
     }
     
-    func clearGrid() {
-        // TODO: Remove existing KBButton items from self.view
-        // (unnecessary for now since we use a static, predefined grid size)
-        self.grid = []
+    func addListeners(cell: UIControl, row: Int, col: Int) -> () {
+        TouchListener(controller: self, cell: cell, row: row, col: col)
     }
     
-    func getInterbuttonConstraints(button: KBButton, row: Int, col: Int) -> [NSLayoutConstraint] {
-        var constraints: [NSLayoutConstraint] = []
-        
-        let container: UIView = button.container
-        container.setTranslatesAutoresizingMaskIntoConstraints(false)
-        /* Width & Height constraints */
-        if (row != 0 || col != 0) {
-            constraints.append(NSLayoutConstraint(item: container, attribute: .Width, relatedBy: .Equal, toItem: self.grid[0][0].container, attribute: .Width, multiplier: 1.0, constant: 0.0))
-            constraints.append(NSLayoutConstraint(item: container, attribute: .Height, relatedBy: .Equal, toItem: self.grid[0][0].container, attribute: .Height, multiplier: 1.0, constant: 0.0))
-        }
-        // Y constraints
-        if (row == 0) {
-            constraints.append(NSLayoutConstraint(item: container, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1.0, constant: self.marginpx))
-        } else {
-            constraints.append(NSLayoutConstraint(item: container, attribute: .Top, relatedBy: .Equal, toItem: self.grid[row-1][col].container, attribute: .Bottom, multiplier: 1.0, constant: self.marginpx))
-        }
-        if (row + 1 == self.rows) {
-            constraints.append(NSLayoutConstraint(item: container, attribute: .Bottom, relatedBy: .Equal, toItem: self.nextKeyboardButton, attribute: .Top, multiplier: 1.0, constant: -self.marginpx))
-        }
-        // X constraints
-        if (col == 0) {
-            constraints.append(NSLayoutConstraint(item: container, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: self.marginpx))
-        } else {
-            constraints.append(NSLayoutConstraint(item: container, attribute: .Left, relatedBy: .Equal, toItem: self.grid[row][col-1].container, attribute: .Right, multiplier: 1.0, constant: self.marginpx))
-        }
-        if (col + 1 == self.cols) {
-            constraints.append(NSLayoutConstraint(item: container, attribute: .Right, relatedBy: .Equal, toItem: self.view, attribute: .Right, multiplier: 1.0, constant: -self.marginpx))
-        }
-        
-        return constraints
+    func selected(row: Int, col: Int) -> () {
+        self.options[row][col]!.selected()
     }
     
     func initializeGrid() {
-        /*
-        self.views = [[UIView]]()
-        for row in 0...self.settings.rows {
-        let thisRow = [UIView]()
-        for col in 0...self.settings.cols {
-        thisRow.append(UIView())
-        }
-        self.views.append(thisRow)
-        }
-        */
-        if (self.rows == 0 || self.cols == 0) {
-            return
-        }
-        self.clearGrid()
-        self.grid = []
-        for row in 0...(self.rows-1) {
-            var row_array: [KBButton] = []
-            for col in 0...(self.cols-1) {
-                let next_button = KBButton(view: self.view, layoutManager: self)
-                next_button.addToLayout(row, col: col)
-                row_array.append(next_button)
+        let rows: Int = self.settings.rows
+        let cols: Int = self.settings.cols
+        
+        // create grid view and cell views
+        self.gridView = UIView()
+        self.view.addSubview(self.gridView)
+        
+        self.cells = [[UIView]]()
+        self.options = [[SelectionOption?]]()
+        
+        for row in 0..<rows {
+            var thisRow = [UIView]()
+            var rowOptions = [SelectionOption?]()
+            for col in 0..<cols {
+                rowOptions.append(nil)
+                let cell = UIControl()
+                thisRow.append(cell)
+                self.gridView.addSubview(cell)
+                self.addListeners(cell, row: row, col: col)
             }
-            self.grid.append(row_array)
+            self.cells.append(thisRow)
+            self.options.append(rowOptions)
         }
         
-        var constraints: [NSLayoutConstraint] = []
-        for row in 0...rows-1 {
-            for col in 0...cols-1 {
-                let kbb = self.grid[row][col]
-                let theseConstraints = self.getInterbuttonConstraints(kbb, row: row, col: col)
-                for constraint in theseConstraints {
-                    constraints.append(constraint)
+        // constrain he grid view in relation to the keyboard view
+        var constraints = [
+            NSLayoutConstraint(item: self.gridView, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: self.marginpx),
+            NSLayoutConstraint(item: self.gridView, attribute: .Right, relatedBy: .Equal, toItem: self.view, attribute: .Right, multiplier: 1.0, constant: -self.marginpx),
+            NSLayoutConstraint(item: self.gridView, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1.0, constant: self.marginpx),
+            NSLayoutConstraint(item: self.gridView, attribute: .Bottom, relatedBy: .Equal, toItem: self.nextKeyboardButton, attribute: .Top, multiplier: 1.0, constant: -self.marginpx)
+        ]
+        
+        
+        // constrain the cells in relation to each other and the grid view
+        
+        let canon = self.cells[0][0]
+        // aspect ratio
+        constraints.append(NSLayoutConstraint(item: canon, attribute: .Height, relatedBy: .LessThanOrEqual,
+            toItem: canon, attribute: .Width, multiplier: 0.7, constant: 0.0))
+        
+        // All same width and height:
+        for row in 0..<rows {
+            for col in 0..<cols {
+                if row != 0 || col != 0 {
+                    constraints.append(NSLayoutConstraint(item: self.cells[row][col], attribute: .Width, relatedBy: .Equal, toItem: canon, attribute: .Width, multiplier: 1.0, constant: 0.0))
+                    constraints.append(NSLayoutConstraint(item: self.cells[row][col], attribute: .Height, relatedBy: .Equal, toItem: canon, attribute: .Height, multiplier: 1.0, constant: 0.0))
+                }
+            }
+        }
+        
+        // Rows all locked to the left and right
+        for row in 0..<rows {
+            constraints.append(NSLayoutConstraint(item: self.cells[row][0], attribute: .Left, relatedBy: .Equal, toItem: self.gridView, attribute: .Left, multiplier: 1.0, constant: 0.0))
+            constraints.append(NSLayoutConstraint(item: self.cells[row][self.cells[row].count-1], attribute: .Right, relatedBy: .Equal, toItem: self.gridView, attribute: .Right, multiplier: 1.0, constant: 0.0))
+        }
+        
+        // Cols all locked to the top and bottom
+        for col in 0..<cols {
+            constraints.append(NSLayoutConstraint(item: self.cells[0][col], attribute: .Top, relatedBy: .Equal, toItem: self.gridView, attribute: .Top, multiplier: 1.0, constant: 0.0))
+            constraints.append(NSLayoutConstraint(item: self.cells[self.cells.count-1][col], attribute: .Bottom, relatedBy: .Equal, toItem: self.gridView, attribute: .Bottom, multiplier: 1.0, constant: 0.0))
+        }
+        
+        // inter-cell spacing
+        for row in 0..<rows {
+            for col in 0..<cols {
+                if row + 1 < rows {
+                    constraints.append(NSLayoutConstraint(item: self.cells[row+1][col], attribute: .Top, relatedBy: .Equal, toItem: self.cells[row][col], attribute: .Bottom, multiplier: 1.0, constant: self.marginpx))
+                }
+                if col + 1 < cols {
+                    constraints.append(NSLayoutConstraint(item: self.cells[row][col+1], attribute: .Left, relatedBy: .Equal, toItem: self.cells[row][col], attribute: .Right, multiplier: 1.0, constant: self.marginpx))
                 }
             }
         }
         self.view.addConstraints(constraints)
+    }
+    
+    func optionsPerGrid() -> Int {
+        return self.settings.rows * self.settings.cols
+    }
+    
+    func clearAllOptions() -> () {
+        for row in 0..<self.settings.rows {
+            for col in 0..<self.settings.cols {
+                self.options[row][col]?.detach()
+            }
+        }
+    }
+    
+    func updateButtons(options: [SelectionOption]) -> () {
+        let n = options.count
+        assert({
+            return n == self.optionsPerGrid();
+            }(), {
+                return "Invalid number of options";
+        }())
         
-        self.view.layoutSubviews()
-        self.updateButtons()
+        self.clearAllOptions()
+        
+        var i: Int = 0
+        
+        for row in 0..<self.settings.rows {
+            for col in 0..<self.settings.cols {
+                let cell: UIView = self.cells[row][col]
+                self.options[row][col]! = options[i]
+                options[i].populateView(cell)
+            }
+        }
     }
     
     func initializeInsertionLabel() {
@@ -185,23 +215,7 @@ class ButtonLayoutManager: NSObject {
         self.diminishInsertionLabel()
     }
     
-    func tapped(row: Int, col: Int) {
-        let char = self.buttonSource.updateState(row, col: col)
-        if (char != nil) {
-            self.showInsertionLabel(char!)
-            self.proxy.insertText(char!)
-        }
-        self.updateButtons()
-    }
-    
-    func updateButtons() {
-        for row in 0...(self.rows-1) {
-            for col in 0...(self.cols-1) {
-                let newImage: UIImage? = self.buttonSource.getImage(row, col: col)
-                if (newImage != nil) {
-                    self.grid[row][col].image.image = newImage!
-                }
-            }
-        }
+    func updateViewConstraints() -> () {
+        // Todo
     }
 }

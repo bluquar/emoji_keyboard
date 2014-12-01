@@ -27,7 +27,6 @@ class KeyboardViewController: UIInputViewController {
         self.buttonLayoutManager = ButtonLayoutManager(settings: self.settings)
         self.emojiSelectionController = EmojiSelectionController(buttonManager: self.buttonLayoutManager)
         super.init(coder: aDecoder)
-        self.buttonLayoutManager.kbDelegate! = self
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -35,7 +34,7 @@ class KeyboardViewController: UIInputViewController {
         self.buttonLayoutManager = ButtonLayoutManager(settings: self.settings)
         self.emojiSelectionController = EmojiSelectionController(buttonManager: self.buttonLayoutManager)
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        self.buttonLayoutManager.kbDelegate! = self
+        self.buttonLayoutManager.kbDelegate = self
     }
     
     override func updateViewConstraints() {

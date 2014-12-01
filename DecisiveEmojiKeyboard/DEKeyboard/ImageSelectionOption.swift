@@ -13,9 +13,14 @@ class ImageSelectionOption: SelectionOption {
     var path: String
     var image: UIImage?
     
+    var label: UILabel?
+    var imageView: UIImageView?
+    var isDisplaying: Bool
+    
     init(controller: EmojiSelectionController, path: String, score: EmojiScore) {
         self.path = path
         self.score = score
+        self.isDisplaying = false
         super.init(controller: controller)
     }
     
@@ -23,41 +28,92 @@ class ImageSelectionOption: SelectionOption {
         self.controller.incrementalSelect(self)
     }
     
-    override func populateView(view: UIView) -> Void {
-        // add an activity spinner thing if it hasn't loaded yet, and the image otherwise
+    override func detach() {
+        self.isDisplaying = false
+        self.label = nil
+        self.imageView = nil
+        super.detach()
     }
-
+    
+    func clearViews() -> () {
+        if self.imageView != nil {
+            self.imageView!.removeFromSuperview()
+        }
+        if self.label != nil {
+            self.label!.removeFromSuperview()
+        }
+    }
+    
+    func addLabel() -> () {
+        self.clearViews()
+        var label = UILabel()
+        label.text = path
+        label.font = UIFont.systemFontOfSize(50)
+        label.textAlignment = NSTextAlignment.Center
+        label.adjustsFontSizeToFitWidth = true
+        label.sizeToFit()
+        label.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.contentView.addSubview(label)
+        
+        let constraints = [
+            NSLayoutConstraint(item: label, attribute: .CenterX, relatedBy: .Equal, toItem: contentView,
+                attribute: .CenterX, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: label, attribute: .CenterY, relatedBy: .Equal, toItem: contentView,
+                attribute: .CenterY, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: label, attribute: .Width, relatedBy: .Equal, toItem: contentView,
+                attribute: .Width, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: label, attribute: .Height, relatedBy: .Equal, toItem: contentView,
+                attribute: .Height, multiplier: 1.0, constant: 0.0)
+        ]
+        contentView.addConstraints(constraints)
+        contentView.layoutSubviews()
+    }
+    
+    func addImage() -> () {
+        var img = self.image!
+        var imgView = UIImageView(image: img)
+        imgView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.contentView.addSubview(imgView)
+        self.imageView = imgView
+        
+        let constraints = [
+            NSLayoutConstraint(item: imgView, attribute: .CenterX, relatedBy: .Equal, toItem: contentView,
+                attribute: .CenterX, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: imgView, attribute: .CenterY, relatedBy: .Equal, toItem: contentView,
+                attribute: .CenterY, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: imgView, attribute: .Width, relatedBy: .Equal, toItem: contentView,
+                attribute: .Width, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: imgView, attribute: .Height, relatedBy: .Equal, toItem: contentView,
+                attribute: .Height, multiplier: 1.0, constant: 0.0)
+        ]
+        contentView.addConstraints(constraints)
+        contentView.layoutSubviews()
+    }
+    
+    override func addContent(contentView: UIView) {
+        self.isDisplaying = true
+        self.clearViews()
+        if self.image == nil {
+            self.addLabel()
+        } else {
+            self.addImage()
+        }
+    }
+    
+    func async_load() -> () {
+        let path = self.path
+        let queue = NSOperationQueue()
+        queue.addOperationWithBlock() {
+            let img = UIImage(contentsOfFile: path)
+            NSOperationQueue.mainQueue().addOperationWithBlock() {
+                self.image = img
+                if self.image != nil {
+                    if self.isDisplaying {
+                        self.clearViews()
+                        self.addImage()
+                    }
+                }
+            }
+        }
+    }
 }
-/*
-import UIKit
-
-class KBButton: NSObject {
-
-var parentView: UIView
-var layoutManager: ButtonLayoutManager
-var button: UIButton
-var image: UIImageView
-var container: UIView
-var row: Int
-var col: Int
-
-init(view: UIView, layoutManager: ButtonLayoutManager) {
-self.parentView = view
-self.layoutManager = layoutManager
-self.row = -1
-self.col = -1
-
-self.button = UIButton.buttonWithType(.System) as UIButton
-self.button.setTitle("", forState: .Normal)
-self.button.titleLabel?.font = UIFont.systemFontOfSize(14)
-self.button.backgroundColor = UIColor(white: 0.9, alpha: 0.5)
-self.button.layer.cornerRadius = 5
-
-self.image = UIImageView()
-self.image.contentMode = UIViewContentMode.ScaleAspectFit
-
-self.container = UIView()
-
-super.init()
-}
-*/

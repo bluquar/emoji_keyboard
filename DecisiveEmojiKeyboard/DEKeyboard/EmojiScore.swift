@@ -32,22 +32,36 @@ class EmojiScore: NSObject {
         self.mapping = mapping
         self.updateBest()
     }
+    
+    convenience init(emojis: String) {
+        var map: [String: Int] = [:]
+        let emojiArray = Array(emojis)
+        for emojiChar in emojiArray {
+            let emoji = String(emojiChar)
+            let idx = map.indexForKey(emoji)
+            if (idx == nil) {
+                map[emoji] = 1
+            } else {
+                map[emoji] = 1 + map[emoji]!
+            }
+        }
+        self.init(mapping: map)
+    }
 
     func updateBest() -> Void {
         // O(n) update. Use sparingly!
-        if self.mapping.count > 0 {
-            var maxRating: Int = -1
-            var maxEmoji: String = ""
-            for (emoji, rating) in self.mapping {
-                if (maxRating < rating || maxEmoji == "") {
-                    maxEmoji = emoji
-                    maxRating = rating
-                }
+        var maxRating: Int = -1
+        var maxEmoji: String = ""
+        for (emoji, rating) in self.mapping {
+            if (maxRating < rating || maxEmoji == "") {
+                maxEmoji = emoji
+                maxRating = rating
             }
-            self.best = maxEmoji
-        } else {
-            self.best = randomEmoji()
         }
+        if maxRating < 0 {
+            maxEmoji = randomEmoji()
+        }
+        self.best = maxEmoji
     }
     
     func updateBest(challenger: String) -> Void {

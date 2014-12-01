@@ -20,8 +20,27 @@ class EmojiSelectionOption: SelectionOption {
         self.controller.finalSelect(self)
     }
     
-    
-    override func populateView(view: UIView) -> Void {
+    override func addContent(contentView: UIView) {
+        let label = UILabel()
+        label.text = self.emoji
+        label.font = UIFont.systemFontOfSize(50)
+        label.textAlignment = NSTextAlignment.Center
+        label.adjustsFontSizeToFitWidth = true
+        label.sizeToFit()
+        label.setTranslatesAutoresizingMaskIntoConstraints(false)
+        contentView.addSubview(label)
         
+        let constraints = [
+            NSLayoutConstraint(item: label, attribute: .CenterX, relatedBy: .Equal, toItem: contentView,
+                attribute: .CenterX, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: label, attribute: .CenterY, relatedBy: .Equal, toItem: contentView,
+                attribute: .CenterY, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: label, attribute: .Width, relatedBy: .Equal, toItem: contentView,
+                attribute: .Width, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: label, attribute: .Height, relatedBy: .Equal, toItem: contentView,
+                attribute: .Height, multiplier: 1.0, constant: 0.0)
+        ]
+        contentView.addConstraints(constraints)
+        contentView.layoutSubviews()
     }
 }

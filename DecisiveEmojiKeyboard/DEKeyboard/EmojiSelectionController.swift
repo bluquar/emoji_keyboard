@@ -8,20 +8,10 @@
 
 import UIKit
 
-func loadImageOptions() -> [ImageSelectionOption] {
-    let options: [ImageSelectionOption] = []
-    let bundle = NSBundle.mainBundle()
-    let path = bundle.pathForResource("associations", ofType: "txt")
-    
-    // TODO: Initialize a bunch of ImageSelectionOption objects
-    
-    return options
-}
-
 // Implements the core logic of the EmojiSelectKB Keyboard
 class EmojiSelectionController: NSObject {
     
-    let imageOptions: [ImageSelectionOption] = loadImageOptions()
+    var imageOptions: [ImageSelectionOption]
     
     let maxSelections: Int = 3 // How many choices to make before inserting a character
     var numSelections: Int
@@ -36,13 +26,41 @@ class EmojiSelectionController: NSObject {
         self.numSelections = 0
         self.buttonManager = buttonManager
         self.accumulator = EmojiScore()
+        self.imageOptions = []
         self.imageOptionsSelected = [:]
         self.imageOptionsRemaining = [:]
         super.init()
     }
-
+    
+    func getImagePath(name: String) -> String {
+        return name
+    }
+    
+    func parseImageOptions(text: String) -> [ImageSelectionOption] {
+        var options: [ImageSelectionOption] = []
+        let lines = text.componentsSeparatedByString("\n")
+        var i: Int = 0
+        while i+2 < lines.count {
+            options.append(ImageSelectionOption(controller: self, path: self.getImagePath(lines[i]), score: EmojiScore(emojis: lines[i+1])))
+            i += 3
+        }
+        return options
+    }
+    
+    func loadImageOptions() -> [ImageSelectionOption] {
+        let bundle = NSBundle.mainBundle()
+        let resources: [AnyObject] = bundle.pathsForResourcesOfType("txt", inDirectory: nil)
+        let path: String = resources[0].stringByResolvingSymlinksInPath
+        let text: String = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)!
+        let options: [ImageSelectionOption] = self.parseImageOptions(text)
+        let loader = BackgroundImageLoader(options: options)
+        loader.start()
+        return options
+    }
+    
     func viewDidLoad(keyboardVC: KeyboardViewController) -> Void {
         self.keyboardVC = keyboardVC
+        self.imageOptions = self.loadImageOptions()
         self.resetState()
     }
     
@@ -55,6 +73,7 @@ class EmojiSelectionController: NSObject {
     }
     
     func resetState() {
+        self.numSelections = 0
         self.accumulator = EmojiScore()
         self.imageOptionsSelected = [:]
         self.imageOptionsRemaining = self.allOptions()
@@ -89,6 +108,7 @@ class EmojiSelectionController: NSObject {
     }
     
     func incrementalSelect(selection: ImageSelectionOption) -> Void {
+        self.numSelections++
         self.accumulator.add(selection.score)
         self.imageOptionsSelected[selection] = true
         self.refreshButtons()
@@ -104,7 +124,7 @@ class EmojiSelectionController: NSObject {
                 let rating: Int = option.score.dot(self.accumulator)
                 if bestOption == nil || bestRating <= rating {
                     bestRating = rating
-                    bestOption! = option
+                    bestOption = option
                 }
             }
             let idx = imageOptionsRemaining.indexForKey(bestOption!)

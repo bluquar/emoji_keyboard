@@ -48,7 +48,7 @@
 		83039AAC1A269D8D003DE3FD /* ImageSelectionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83039AAB1A269D8D003DE3FD /* ImageSelectionOption.swift */; };
 		83039AAE1A26A6A4003DE3FD /* associations.txt in Resources */ = {isa = PBXBuildFile; fileRef = 83039AAD1A26A6A4003DE3FD /* associations.txt */; };
 		831D57DD1A2959F100286001 /* EmojiSelectionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D57DC1A2959F100286001 /* EmojiSelectionOption.swift */; };
-		831D57DF1A29612500286001 /* TouchListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831D57DE1A29612500286001 /* TouchListener.swift */; };
+		83FD5B801A2BE8EA00BBFEAA /* BackgroundImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FD5B7F1A2BE8EA00BBFEAA /* BackgroundImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,7 +129,7 @@
 		83039AAB1A269D8D003DE3FD /* ImageSelectionOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSelectionOption.swift; sourceTree = "<group>"; };
 		83039AAD1A26A6A4003DE3FD /* associations.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = associations.txt; sourceTree = "<group>"; };
 		831D57DC1A2959F100286001 /* EmojiSelectionOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiSelectionOption.swift; sourceTree = "<group>"; };
-		831D57DE1A29612500286001 /* TouchListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchListener.swift; sourceTree = "<group>"; };
+		83FD5B7F1A2BE8EA00BBFEAA /* BackgroundImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,16 +218,16 @@
 		83039A5F1A255D16003DE3FD /* DEKeyboard */ = {
 			isa = PBXGroup;
 			children = (
-				83039A621A255D16003DE3FD /* KeyboardViewController.swift */,
+				83FD5B7F1A2BE8EA00BBFEAA /* BackgroundImageLoader.swift */,
 				83039A6B1A2568A4003DE3FD /* ButtonLayoutManager.swift */,
 				83039A751A256F45003DE3FD /* EmojiScore.swift */,
 				83039A711A256E91003DE3FD /* EmojiSelectionController.swift */,
 				831D57DC1A2959F100286001 /* EmojiSelectionOption.swift */,
 				83039AAB1A269D8D003DE3FD /* ImageSelectionOption.swift */,
+				83039A621A255D16003DE3FD /* KeyboardViewController.swift */,
 				83039A731A256EF4003DE3FD /* SelectionOption.swift */,
 				83039A6F1A256C82003DE3FD /* SettingsManager.swift */,
 				83039A601A255D16003DE3FD /* Supporting Files */,
-				831D57DE1A29612500286001 /* TouchListener.swift */,
 			);
 			path = DEKeyboard;
 			sourceTree = "<group>";
@@ -447,7 +447,7 @@
 				83039A721A256E91003DE3FD /* EmojiSelectionController.swift in Sources */,
 				83039A6C1A2568A4003DE3FD /* ButtonLayoutManager.swift in Sources */,
 				83039AAC1A269D8D003DE3FD /* ImageSelectionOption.swift in Sources */,
-				831D57DF1A29612500286001 /* TouchListener.swift in Sources */,
+				83FD5B801A2BE8EA00BBFEAA /* BackgroundImageLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

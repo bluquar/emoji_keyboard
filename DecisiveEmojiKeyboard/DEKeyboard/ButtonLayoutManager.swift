@@ -56,6 +56,7 @@ class ButtonLayoutManager: NSObject {
     }
     
     func setupUI() {
+        self.view.removeConstraints(self.view.constraints())
         self.initializeInsertionLabel()
         self.initializeGrid()
         self.initializeNextKBbutton()
@@ -115,9 +116,8 @@ class ButtonLayoutManager: NSObject {
         constraints.append(NSLayoutConstraint(item: self.insertionLabel!, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: self.view, attribute: .Height, multiplier: 1.0, constant: 0.0))
         
         constraints.append(NSLayoutConstraint(item: self.nextKeyboardButton, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: self.cells[0][0], attribute: .Height, multiplier: 0.5, constant: 0.0))
-        
+
         self.view.addConstraints(constraints)
-        
         self.view.layoutSubviews()
     }
     
@@ -166,35 +166,19 @@ class ButtonLayoutManager: NSObject {
         return self.settings.rows * self.settings.cols
     }
     
-    func clearAllOptions() -> () {
+    func updateButtons(options: [SelectionOption]) -> () {
+        var i: Int = 0
         for row in 0..<self.settings.rows {
             for col in 0..<self.settings.cols {
                 self.options[row][col]?.detach()
-            }
-        }
-    }
-    
-    func updateButtons(options: [SelectionOption]) -> () {
-        let n = options.count
-        assert({
-            return n == self.optionsPerGrid();
-            }(), {
-                return "Invalid number of options";
-                }())
-        
-        self.clearAllOptions()
-        
-        var i: Int = 0
-        
-        for row in 0..<self.settings.rows {
-            for col in 0..<self.settings.cols {
                 let cell: UIView = self.cells[row][col]
                 self.options[row][col] = options[i]
                 options[i].populateView(cell)
                 i++
+                cell.layoutIfNeeded()
+                self.view.layoutIfNeeded()
             }
         }
-        self.applyUIConstraints()
     }
     
     func initializeInsertionLabel() {

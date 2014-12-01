@@ -23,7 +23,7 @@ class BackgroundImageLoader: NSObject {
         var option: ImageSelectionOption? = nil
         // Look for options that are displaying right now
         for (candidate, _) in self.optionsRemaining {
-            if candidate.image == nil && candidate.isDisplaying {
+            if candidate.image == nil && candidate.contentView != nil {
                 option = candidate
                 break
             }
@@ -53,6 +53,5 @@ class BackgroundImageLoader: NSObject {
     
     func start() -> () {
         self.load()
-        
     }
 }

@@ -37,7 +37,7 @@ class SelectionOption: NSObject { // EmojiSelection
     
     func detach() -> Void {
         self.contentView.removeFromSuperview()
-        self.parentView?.layoutSubviews()
+        self.contentView = nil
     }
     
     func touchDown(sender: AnyObject) {
@@ -72,14 +72,12 @@ class SelectionOption: NSObject { // EmojiSelection
             NSLayoutConstraint(item: parentView, attribute: .Height, relatedBy: .Equal, toItem: self.button, attribute: .Height, multiplier: 1.0, constant: 4.0)
         ]
         self.parentView.addConstraints(constraints)
-        self.parentView.layoutSubviews()
     }
     
     func configureContentView(parentView: UIView) -> () {
         self.contentView = UIView()
         
         parentView.addSubview(self.contentView)
-        
         self.contentView.setTranslatesAutoresizingMaskIntoConstraints(false)
         
         let constraints: [NSLayoutConstraint] = [
@@ -89,7 +87,6 @@ class SelectionOption: NSObject { // EmojiSelection
             NSLayoutConstraint(item: parentView, attribute: .Height, relatedBy: .Equal, toItem: self.contentView, attribute: .Height, multiplier: 1.0, constant: 0.0)
         ]
         parentView.addConstraints(constraints)
-        parentView.layoutSubviews()
         self.parentView = parentView
     }
 }

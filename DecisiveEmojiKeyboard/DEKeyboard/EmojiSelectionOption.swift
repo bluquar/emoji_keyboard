@@ -23,7 +23,7 @@ class EmojiSelectionOption: SelectionOption {
     override func addContent(contentView: UIView) {
         let label = UILabel()
         label.text = self.emoji
-        label.font = UIFont.systemFontOfSize(50)
+        label.font = UIFont.systemFontOfSize(100)
         label.textAlignment = NSTextAlignment.Center
         label.adjustsFontSizeToFitWidth = true
         label.sizeToFit()
@@ -31,16 +31,15 @@ class EmojiSelectionOption: SelectionOption {
         contentView.addSubview(label)
         
         let constraints = [
-            NSLayoutConstraint(item: label, attribute: .CenterX, relatedBy: .Equal, toItem: contentView,
+            NSLayoutConstraint(item: label, attribute: .CenterX, relatedBy: .Equal, toItem: self.parentView!,
                 attribute: .CenterX, multiplier: 1.0, constant: 0.0),
-            NSLayoutConstraint(item: label, attribute: .CenterY, relatedBy: .Equal, toItem: contentView,
+            NSLayoutConstraint(item: label, attribute: .CenterY, relatedBy: .Equal, toItem: self.parentView!,
                 attribute: .CenterY, multiplier: 1.0, constant: 0.0),
-            NSLayoutConstraint(item: label, attribute: .Width, relatedBy: .Equal, toItem: contentView,
+            NSLayoutConstraint(item: label, attribute: .Width, relatedBy: .Equal, toItem: self.parentView!,
                 attribute: .Width, multiplier: 1.0, constant: 0.0),
-            NSLayoutConstraint(item: label, attribute: .Height, relatedBy: .Equal, toItem: contentView,
-                attribute: .Height, multiplier: 1.0, constant: 0.0)
+            NSLayoutConstraint(item: label, attribute: .Width, relatedBy: .Equal, toItem: self.parentView!,
+                attribute: .Width, multiplier: 1.0, constant: 0.0),
         ]
-        contentView.addConstraints(constraints)
-        contentView.layoutSubviews()
+        self.parentView.addConstraints(constraints)
     }
 }

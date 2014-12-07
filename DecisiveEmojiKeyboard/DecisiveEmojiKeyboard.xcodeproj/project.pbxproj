@@ -7,6 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C7F1FC81A34EB6300B805C4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FC71A34EB6300B805C4 /* AudioToolbox.framework */; };
+		0C7F1FCA1A34EB6C00B805C4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FC91A34EB6C00B805C4 /* CFNetwork.framework */; };
+		0C7F1FCC1A34EB7200B805C4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FCB1A34EB7200B805C4 /* CoreGraphics.framework */; };
+		0C7F1FCE1A34EB7900B805C4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FCD1A34EB7900B805C4 /* CoreLocation.framework */; };
+		0C7F1FD01A34EB8400B805C4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FCF1A34EB8400B805C4 /* libz.dylib */; };
+		0C7F1FD21A34EB8900B805C4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FD11A34EB8900B805C4 /* MobileCoreServices.framework */; };
+		0C7F1FD41A34EB9000B805C4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FD31A34EB9000B805C4 /* QuartzCore.framework */; };
+		0C7F1FD61A34EB9900B805C4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FD51A34EB9900B805C4 /* Security.framework */; };
+		0C7F1FD81A34EB9F00B805C4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FD71A34EB9F00B805C4 /* StoreKit.framework */; };
+		0C7F1FDA1A34EBA800B805C4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FD91A34EBA800B805C4 /* SystemConfiguration.framework */; };
+		0C7F1FDD1A34EC3600B805C4 /* wow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F1FDC1A34EC3600B805C4 /* wow.m */; };
+		0C7F1FE31A34ECD300B805C4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FDF1A34ECD300B805C4 /* Bolts.framework */; };
+		0C7F1FE41A34ECD300B805C4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FE01A34ECD300B805C4 /* Parse.framework */; };
+		0C7F1FE51A34ECD300B805C4 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FE11A34ECD300B805C4 /* ParseFacebookUtils.framework */; };
+		0C7F1FE61A34ECD300B805C4 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FE21A34ECD300B805C4 /* ParseUI.framework */; };
+		0C7F1FE71A34EF0E00B805C4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FD91A34EBA800B805C4 /* SystemConfiguration.framework */; };
+		0C7F1FE81A34EF1300B805C4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FD71A34EB9F00B805C4 /* StoreKit.framework */; };
+		0C7F1FE91A34EF1800B805C4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FD51A34EB9900B805C4 /* Security.framework */; };
+		0C7F1FEA1A34EF1C00B805C4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FD31A34EB9000B805C4 /* QuartzCore.framework */; };
+		0C7F1FEB1A34EF2100B805C4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FD11A34EB8900B805C4 /* MobileCoreServices.framework */; };
+		0C7F1FEC1A34EF2600B805C4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FCF1A34EB8400B805C4 /* libz.dylib */; };
+		0C7F1FED1A34EF2A00B805C4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FCD1A34EB7900B805C4 /* CoreLocation.framework */; };
+		0C7F1FEE1A34EF2F00B805C4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FCB1A34EB7200B805C4 /* CoreGraphics.framework */; };
+		0C7F1FEF1A34EF3400B805C4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FC91A34EB6C00B805C4 /* CFNetwork.framework */; };
+		0C7F1FF01A34EF3A00B805C4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FC71A34EB6300B805C4 /* AudioToolbox.framework */; };
+		0C7F1FF61A34EFC000B805C4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FF21A34EFC000B805C4 /* Bolts.framework */; };
+		0C7F1FF71A34EFC000B805C4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FF31A34EFC000B805C4 /* Parse.framework */; };
+		0C7F1FF81A34EFC000B805C4 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FF41A34EFC000B805C4 /* ParseFacebookUtils.framework */; };
+		0C7F1FF91A34EFC000B805C4 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F1FF51A34EFC000B805C4 /* ParseUI.framework */; };
+		0C7F1FFC1A34F03D00B805C4 /* lmao.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F1FFB1A34F03D00B805C4 /* lmao.m */; };
 		83039A3B1A255CC8003DE3FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83039A3A1A255CC8003DE3FD /* AppDelegate.swift */; };
 		83039A3D1A255CC8003DE3FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83039A3C1A255CC8003DE3FD /* ViewController.swift */; };
 		83039A401A255CC8003DE3FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83039A3E1A255CC8003DE3FD /* Main.storyboard */; };
@@ -83,6 +113,28 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C7F1FC71A34EB6300B805C4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0C7F1FC91A34EB6C00B805C4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		0C7F1FCB1A34EB7200B805C4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0C7F1FCD1A34EB7900B805C4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0C7F1FCF1A34EB8400B805C4 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		0C7F1FD11A34EB8900B805C4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		0C7F1FD31A34EB9000B805C4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0C7F1FD51A34EB9900B805C4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0C7F1FD71A34EB9F00B805C4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		0C7F1FD91A34EBA800B805C4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0C7F1FDB1A34EC3600B805C4 /* DecisiveEmojiKeyboard-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DecisiveEmojiKeyboard-Bridging-Header.h"; sourceTree = "<group>"; };
+		0C7F1FDC1A34EC3600B805C4 /* wow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wow.m; sourceTree = "<group>"; };
+		0C7F1FDF1A34ECD300B805C4 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		0C7F1FE01A34ECD300B805C4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		0C7F1FE11A34ECD300B805C4 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		0C7F1FE21A34ECD300B805C4 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		0C7F1FF21A34EFC000B805C4 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		0C7F1FF31A34EFC000B805C4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		0C7F1FF41A34EFC000B805C4 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		0C7F1FF51A34EFC000B805C4 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		0C7F1FFA1A34F03D00B805C4 /* DEKeyboard-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DEKeyboard-Bridging-Header.h"; sourceTree = "<group>"; };
+		0C7F1FFB1A34F03D00B805C4 /* lmao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = lmao.m; path = emoji_keyboard/DecisiveEmojiKeyboard/DEKeyboard/emoji_keyboard/DecisiveEmojiKeyboard/DEKeyboard/lmao.m; sourceTree = "<group>"; };
 		83039A351A255CC8003DE3FD /* DecisiveEmojiKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecisiveEmojiKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83039A391A255CC8003DE3FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83039A3A1A255CC8003DE3FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +189,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C7F1FDA1A34EBA800B805C4 /* SystemConfiguration.framework in Frameworks */,
+				0C7F1FD81A34EB9F00B805C4 /* StoreKit.framework in Frameworks */,
+				0C7F1FE61A34ECD300B805C4 /* ParseUI.framework in Frameworks */,
+				0C7F1FD61A34EB9900B805C4 /* Security.framework in Frameworks */,
+				0C7F1FD41A34EB9000B805C4 /* QuartzCore.framework in Frameworks */,
+				0C7F1FD21A34EB8900B805C4 /* MobileCoreServices.framework in Frameworks */,
+				0C7F1FD01A34EB8400B805C4 /* libz.dylib in Frameworks */,
+				0C7F1FCE1A34EB7900B805C4 /* CoreLocation.framework in Frameworks */,
+				0C7F1FCC1A34EB7200B805C4 /* CoreGraphics.framework in Frameworks */,
+				0C7F1FE31A34ECD300B805C4 /* Bolts.framework in Frameworks */,
+				0C7F1FCA1A34EB6C00B805C4 /* CFNetwork.framework in Frameworks */,
+				0C7F1FE41A34ECD300B805C4 /* Parse.framework in Frameworks */,
+				0C7F1FC81A34EB6300B805C4 /* AudioToolbox.framework in Frameworks */,
+				0C7F1FE51A34ECD300B805C4 /* ParseFacebookUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,19 +217,68 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C7F1FF01A34EF3A00B805C4 /* AudioToolbox.framework in Frameworks */,
+				0C7F1FEF1A34EF3400B805C4 /* CFNetwork.framework in Frameworks */,
+				0C7F1FF91A34EFC000B805C4 /* ParseUI.framework in Frameworks */,
+				0C7F1FEE1A34EF2F00B805C4 /* CoreGraphics.framework in Frameworks */,
+				0C7F1FED1A34EF2A00B805C4 /* CoreLocation.framework in Frameworks */,
+				0C7F1FEC1A34EF2600B805C4 /* libz.dylib in Frameworks */,
+				0C7F1FEB1A34EF2100B805C4 /* MobileCoreServices.framework in Frameworks */,
+				0C7F1FEA1A34EF1C00B805C4 /* QuartzCore.framework in Frameworks */,
+				0C7F1FE91A34EF1800B805C4 /* Security.framework in Frameworks */,
+				0C7F1FF61A34EFC000B805C4 /* Bolts.framework in Frameworks */,
+				0C7F1FE81A34EF1300B805C4 /* StoreKit.framework in Frameworks */,
+				0C7F1FF71A34EFC000B805C4 /* Parse.framework in Frameworks */,
+				0C7F1FE71A34EF0E00B805C4 /* SystemConfiguration.framework in Frameworks */,
+				0C7F1FF81A34EFC000B805C4 /* ParseFacebookUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C7F1FDE1A34ECD300B805C4 /* parse-library-1.5.0 */ = {
+			isa = PBXGroup;
+			children = (
+				0C7F1FDF1A34ECD300B805C4 /* Bolts.framework */,
+				0C7F1FE01A34ECD300B805C4 /* Parse.framework */,
+				0C7F1FE11A34ECD300B805C4 /* ParseFacebookUtils.framework */,
+				0C7F1FE21A34ECD300B805C4 /* ParseUI.framework */,
+			);
+			path = "parse-library-1.5.0";
+			sourceTree = "<group>";
+		};
+		0C7F1FF11A34EFC000B805C4 /* parse-library-1.5.0 */ = {
+			isa = PBXGroup;
+			children = (
+				0C7F1FF21A34EFC000B805C4 /* Bolts.framework */,
+				0C7F1FF31A34EFC000B805C4 /* Parse.framework */,
+				0C7F1FF41A34EFC000B805C4 /* ParseFacebookUtils.framework */,
+				0C7F1FF51A34EFC000B805C4 /* ParseUI.framework */,
+			);
+			path = "parse-library-1.5.0";
+			sourceTree = "<group>";
+		};
 		83039A2C1A255CC8003DE3FD = {
 			isa = PBXGroup;
 			children = (
+				0C7F1FDE1A34ECD300B805C4 /* parse-library-1.5.0 */,
+				0C7F1FDC1A34EC3600B805C4 /* wow.m */,
+				0C7F1FD91A34EBA800B805C4 /* SystemConfiguration.framework */,
+				0C7F1FD71A34EB9F00B805C4 /* StoreKit.framework */,
+				0C7F1FD51A34EB9900B805C4 /* Security.framework */,
+				0C7F1FD31A34EB9000B805C4 /* QuartzCore.framework */,
+				0C7F1FD11A34EB8900B805C4 /* MobileCoreServices.framework */,
+				0C7F1FCF1A34EB8400B805C4 /* libz.dylib */,
+				0C7F1FCD1A34EB7900B805C4 /* CoreLocation.framework */,
+				0C7F1FCB1A34EB7200B805C4 /* CoreGraphics.framework */,
+				0C7F1FC91A34EB6C00B805C4 /* CFNetwork.framework */,
+				0C7F1FC71A34EB6300B805C4 /* AudioToolbox.framework */,
 				83039A371A255CC8003DE3FD /* DecisiveEmojiKeyboard */,
 				83039A5F1A255D16003DE3FD /* DEKeyboard */,
 				83039A361A255CC8003DE3FD /* Products */,
 				83039A4D1A255CC8003DE3FD /* DecisiveEmojiKeyboardTests */,
+				0C7F1FDB1A34EC3600B805C4 /* DecisiveEmojiKeyboard-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -218,6 +333,7 @@
 		83039A5F1A255D16003DE3FD /* DEKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				0C7F1FF11A34EFC000B805C4 /* parse-library-1.5.0 */,
 				83FD5B7F1A2BE8EA00BBFEAA /* BackgroundImageLoader.swift */,
 				83039A6B1A2568A4003DE3FD /* ButtonLayoutManager.swift */,
 				83039A751A256F45003DE3FD /* EmojiScore.swift */,
@@ -228,6 +344,8 @@
 				83039A731A256EF4003DE3FD /* SelectionOption.swift */,
 				83039A6F1A256C82003DE3FD /* SettingsManager.swift */,
 				83039A601A255D16003DE3FD /* Supporting Files */,
+				0C7F1FFB1A34F03D00B805C4 /* lmao.m */,
+				0C7F1FFA1A34F03D00B805C4 /* DEKeyboard-Bridging-Header.h */,
 			);
 			path = DEKeyboard;
 			sourceTree = "<group>";
@@ -422,6 +540,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C7F1FDD1A34EC3600B805C4 /* wow.m in Sources */,
 				83039A3D1A255CC8003DE3FD /* ViewController.swift in Sources */,
 				83039A3B1A255CC8003DE3FD /* AppDelegate.swift in Sources */,
 			);
@@ -439,6 +558,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C7F1FFC1A34F03D00B805C4 /* lmao.m in Sources */,
 				83039A701A256C82003DE3FD /* SettingsManager.swift in Sources */,
 				83039A741A256EF4003DE3FD /* SelectionOption.swift in Sources */,
 				831D57DD1A2959F100286001 /* EmojiSelectionOption.swift in Sources */,
@@ -567,10 +687,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/parse-library-1.5.0",
+				);
 				INFOPLIST_FILE = DecisiveEmojiKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DecisiveEmojiKeyboard-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -578,10 +705,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/parse-library-1.5.0",
+				);
 				INFOPLIST_FILE = DecisiveEmojiKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DecisiveEmojiKeyboard-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -622,6 +755,11 @@
 		83039A681A255D16003DE3FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DEKeyboard/parse-library-1.5.0",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -630,16 +768,24 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "DEKeyboard/DEKeyboard-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		83039A691A255D16003DE3FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DEKeyboard/parse-library-1.5.0",
+				);
 				INFOPLIST_FILE = DEKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "DEKeyboard/DEKeyboard-Bridging-Header.h";
 			};
 			name = Release;
 		};

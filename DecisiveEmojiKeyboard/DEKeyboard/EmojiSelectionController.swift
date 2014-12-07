@@ -30,6 +30,11 @@ class EmojiSelectionController: NSObject {
         self.imageOptionsSelected = [:]
         self.imageOptionsRemaining = [:]
         super.init()
+        self.initParse()
+    }
+    
+    func initParse() -> () {
+        Parse.setApplicationId("J3RRC4EBBpTJhzKEJ6SWSfWZ3bPUo6mFvAoPkK0C",  clientKey: "RIkvgQJiE8IIt6fd4muh68KitSQhajdEMpYKlxkl")
     }
     
     func getImagePath(name: String) -> String {
@@ -51,7 +56,7 @@ class EmojiSelectionController: NSObject {
         let bundle = NSBundle.mainBundle()
         let resources: [AnyObject] = bundle.pathsForResourcesOfType("txt", inDirectory: nil)
         let path: String = resources[0].stringByResolvingSymlinksInPath
-        let text: String = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)!
+        let text: String = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)
         let options: [ImageSelectionOption] = self.parseImageOptions(text)
         let loader = BackgroundImageLoader(options: options)
         loader.start()
@@ -103,8 +108,20 @@ class EmojiSelectionController: NSObject {
     }
     
     func finalSelect(selection: EmojiSelectionOption) -> () {
-        self.keyboardVC.insertText(selection.emoji)
+        let emoji = selection.emoji
+        self.updatePreferences(emoji)
+        self.keyboardVC.insertText(emoji)
         self.resetState()
+    }
+    
+    func updatePreferences(emoji: String) -> () {
+        for (imageSelection: ImageSelectionOption, _) in self.imageOptionsSelected {
+            imageSelection.score.add(EmojiScore(mapping: [emoji: 1]))
+            var emojiObject : PFObject = PFObject(className: "Emoji", dictionary: ["UnicodeValue": emoji])
+            var imageObject: PFObject = PFObject(className: "Image", dictionary: ["ImageFile": imageSelection.path, "ImageName": imageSelection.path])
+            var ratingObject: PFObject = PFObject(className: "Rating", dictionary: ["Emoji": emojiObject, "Rating": imageSelection.score.score(emoji)])
+            var emojiScoreObject: PFObject = PFObject(className: "ImageScore", dictionary: ["Image": imageObject, "Score": ratingObject, "User": PFUser.currentUser()])
+        }
     }
     
     func incrementalSelect(selection: ImageSelectionOption) -> Void {

@@ -23,7 +23,7 @@ class EmojiSelectionOption: SelectionOption {
     override func addContent(contentView: UIView) {
         let label = UILabel()
         label.text = self.emoji
-        label.font = UIFont.systemFontOfSize(100)
+        label.font = UIFont.systemFontOfSize(75)
         label.textAlignment = NSTextAlignment.Center
         label.adjustsFontSizeToFitWidth = true
         label.sizeToFit()

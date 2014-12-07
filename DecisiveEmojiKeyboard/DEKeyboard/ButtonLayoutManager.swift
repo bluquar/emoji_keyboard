@@ -66,17 +66,22 @@ class ButtonLayoutManager: NSObject {
     func applyUIConstraints() -> () {
         let rows = self.settings.rows
         let cols = self.settings.cols
-    
+        
         self.nextKeyboardButton.setTranslatesAutoresizingMaskIntoConstraints(false)
         self.insertionLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
         
         var constraints: [NSLayoutConstraint] = [
-            NSLayoutConstraint(item: self.nextKeyboardButton, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: DE.marginpx),
-            NSLayoutConstraint(item: self.nextKeyboardButton, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: -DE.marginpx),
-            // button aspect ratio
-            NSLayoutConstraint(item: self.cells[0][0], attribute: .Height, relatedBy: .LessThanOrEqual,
-                toItem: self.cells[0][0], attribute: .Width, multiplier: 0.7, constant: 0.0)
         ]
+        
+        constraints.append(NSLayoutConstraint(item: self.nextKeyboardButton, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: DE.marginpx))
+        constraints.append(NSLayoutConstraint(item: self.nextKeyboardButton, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: -DE.marginpx))
+        constraints.append(NSLayoutConstraint(item: self.cells[0][0], attribute: .Height, relatedBy: .LessThanOrEqual,
+            toItem: self.cells[0][0], attribute: .Width, multiplier: 0.85, constant: 0.0))
+        constraints.append(NSLayoutConstraint(item: self.view, attribute: .Height, relatedBy: .Equal, toItem: self.view, attribute: .Width, multiplier: 0.6, constant: 0.0))
+        /*constraints.append(NSLayoutConstraint(item: self.view, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: self.view, attribute: .Width, multiplier: 0.8, constant: 0.0))*/
+        
+        
+        
         // cells same size as each other
         for row in 0..<rows {
             for col in 0..<cols {
@@ -116,7 +121,7 @@ class ButtonLayoutManager: NSObject {
         constraints.append(NSLayoutConstraint(item: self.insertionLabel!, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: self.view, attribute: .Height, multiplier: 1.0, constant: 0.0))
         
         constraints.append(NSLayoutConstraint(item: self.nextKeyboardButton, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: self.cells[0][0], attribute: .Height, multiplier: 0.5, constant: 0.0))
-
+        
         self.view.addConstraints(constraints)
         self.view.layoutSubviews()
     }
@@ -138,7 +143,7 @@ class ButtonLayoutManager: NSObject {
     func initializeGrid() {
         let rows: Int = self.settings.rows
         let cols: Int = self.settings.cols
-
+        
         // create grid view and cell views
         
         self.cells = []
